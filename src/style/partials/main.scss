@@ -1,0 +1,53 @@
+body {
+  @include font-source-sans(1.3vw, #ffffff, 400, false);
+}
+.section-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: calc(100% - 30px);
+  max-width: vw(1240);
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.fp-viewing-0 {
+  .development {
+    .title {
+      transform: translateX(0);
+    }
+  }
+}
+
+.fp-viewing-1 {
+  .services {
+    .title {
+      transform: translateX(0);
+    }
+  }
+  .services__item {
+    transform: translateX(0);
+  }
+}
+
+.fp-viewing-2 {
+  .clients {
+    .title {
+      transform: translateX(0);
+    }
+  }
+  .clients__item {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,9 @@
+.title {
+  display: block;
+  @include font-source-sans(3.125vw, #fff, 700, 150%);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: min-content;
+  transition: 0.2s transform 0.5s;
+  transform: translateX(-100vw);
+}

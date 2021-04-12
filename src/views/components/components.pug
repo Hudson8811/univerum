@@ -1,0 +1,6 @@
+mixin svg(svgName)
+	svg
+		use(xlink:href=`./assets/images/svg/sprite.svg#${svgName}`)
+
+mixin title(val)
+	p.title= val

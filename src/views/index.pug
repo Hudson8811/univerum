@@ -1,0 +1,17 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'Main page',
+		class: 'main_page'
+		};
+
+block main
+	div(id='fullpage')
+		.section
+			include blocks/_development
+		.section
+			include blocks/_services
+		.section
+			include blocks/_clients
