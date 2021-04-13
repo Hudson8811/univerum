@@ -1,0 +1,66 @@
+.confident {
+  position: relative;
+  background: #090833;
+  overflow: hidden;
+
+  &:before {
+    @include pseudo;
+    width: vw(735);
+    height: vw(466);
+    left: vw(77);
+    bottom: vw(91);
+    background: center / cover url('../images/confident-before.png') no-repeat;
+  }
+
+  &:after {
+    @include pseudo;
+    width: vw(1179);
+    height: vw(865);
+    top: 50%;
+    right: vw(-610);
+    transform: translateY(-50%);
+    background: center / cover url('../images/confident-after.png') no-repeat;
+  }
+
+  .title {
+    font-size: vw(45);
+    margin-bottom: vw(58);
+  }
+
+  &__content {
+    max-width: vw(962);
+  }
+
+  &__item {
+    display: block;
+    font-weight: 400;
+    font-size: vw(22);
+    line-height: 150%;
+    color: #ffffff;
+    transform: translateX(-100vw);
+
+    &:nth-child(2) {
+      transition: 0s transform 0.2s;
+    }
+
+    &:nth-child(3) {
+      transition: 0.1s transform 0.2s;
+    }
+
+    &:nth-child(4) {
+      transition: 0.2s transform 0.2s;
+    }
+
+    &:nth-child(5) {
+      transition: 0.3s transform 0.2s;
+    }
+
+    &:nth-child(6) {
+      transition: 0.4s transform 0.2s;
+    }
+
+    & + & {
+      margin-top: vw(20);
+    }
+  }
+}

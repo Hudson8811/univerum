@@ -1,0 +1,33 @@
+.havystages {
+  background-color: #081529;
+
+  .title {
+    padding-bottom: vw(74);
+  }
+
+  &__content {
+    max-width: vw(648);
+    margin-left: auto;
+  }
+
+  &__item {
+    display: block;
+    font-weight: 400;
+    font-size: vw(22);
+    line-height: 180%;
+    color: #ffffff;
+    transform: translateX(100vw);
+
+    &:nth-child(1) {
+      transition: 0s transform 0.2s;
+    }
+
+    &:nth-child(2) {
+      transition: 0.1s transform 0.2s;
+    }
+
+    & + & {
+      margin-top: vw(30);
+    }
+  }
+}

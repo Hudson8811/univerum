@@ -1,6 +1,14 @@
 body {
   @include font-source-sans(1.3vw, #ffffff, 400, false);
 }
+
+html,
+body {
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 0px; /* ширина для вертикального скролла */
+  }
+}
 .section-wrapper {
   display: flex;
   width: 100vw;
@@ -12,6 +20,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.section {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 .container {
   width: calc(100% - 30px);
   max-width: vw(1240);
@@ -20,6 +36,10 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .fp-viewing-0 {
@@ -48,6 +68,55 @@ body {
     }
   }
   .clients__item {
+    transform: translateX(0);
+  }
+}
+
+.fp-viewing-3 {
+  .stages {
+    .title {
+      transform: translateX(0);
+    }
+  }
+
+  .stages__item {
+    opacity: 1;
+  }
+}
+
+.fp-viewing-4 {
+  .confident {
+    .title {
+      transform: translateX(0);
+    }
+  }
+
+  .confident__item {
+    transform: translateX(0);
+  }
+}
+
+.fp-viewing-5 {
+  .results {
+    .title {
+      transform: translateX(0);
+    }
+  }
+
+  .results__item,
+  .results__desc {
+    transform: translateX(0);
+  }
+}
+
+.fp-viewing-6 {
+  .havystages {
+    .title {
+      transform: translateX(0);
+    }
+  }
+
+  .havystages__item {
     transform: translateX(0);
   }
 }

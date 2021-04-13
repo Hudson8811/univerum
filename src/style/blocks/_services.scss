@@ -22,25 +22,25 @@
     transform: translateX(100vw);
 
     &:nth-child(1) {
-      transition: color 0.2s, 0.2s transform 0.5s;
+      transition: color 0.2s, 0s transform 0.2s;
     }
     &:nth-child(2) {
-      transition: color 0.2s, 0.3s transform 0.5s;
+      transition: color 0.2s, 0.1s transform 0.2s;
     }
     &:nth-child(3) {
-      transition: color 0.2s, 0.4s transform 0.5s;
+      transition: color 0.2s, 0.2s transform 0.2s;
     }
     &:nth-child(4) {
-      transition: color 0.2s, 0.5s transform 0.5s;
+      transition: color 0.2s, 0.3s transform 0.2s;
     }
     &:nth-child(5) {
-      transition: color 0.2s, 0.6s transform 0.5s;
+      transition: color 0.2s, 0.4s transform 0.2s;
     }
     &:nth-child(6) {
-      transition: color 0.2s, 0.7s transform 0.5s;
+      transition: color 0.2s, 0.5s transform 0.2s;
     }
     &:nth-child(7) {
-      transition: color 0.2s, 0.8s transform 0.5s;
+      transition: color 0.2s, 0.6s transform 0.2s;
     }
 
     &:before {
