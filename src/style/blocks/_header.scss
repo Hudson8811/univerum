@@ -36,6 +36,7 @@
   z-index: 99;
   bottom: vw(91);
   display: block;
+  transition: 0.2s linear;
 
   svg {
     display: block;
@@ -59,6 +60,10 @@
     svg {
       --fill: rgba(66, 71, 84, 0.38);
     }
+  }
+
+  &.hide {
+    opacity: 0;
   }
 }
 

@@ -1,0 +1,40 @@
+.forms.section-wrapper 
+    .container 
+        .forms__wrapper 
+            +title('обсудим ваш проект?')
+
+            form.forms__content(action="")
+                .forms__row
+                    label.forms__label
+                        span.forms__placeholder Ваше имя
+                        input.forms__input(type="text", name="имя")
+
+                    label.forms__label
+                        span.forms__placeholder Email
+                        input.forms__input(type="email", name="почта")
+
+                    label.forms__label
+                        span.forms__placeholder Номер телефона
+                        input.forms__input(type="text", name="номер")
+
+                    label.forms__label.forms__label-file
+                        span.forms__placeholder Прикрепить файл
+                        input.forms__input(type="file", name="файл")
+                        span.forms__disclamer-files Максимум 3 файла, до 8 мб. каждый
+                
+                .forms__row
+                    label.forms__label.forms__textarea-wrapper
+                        span.forms__placeholder Описание задачи
+                        textarea.forms__textarea(name="задача") 
+                    .forms__submit
+                        .forms__capcha
+                            label.forms__capcha-label
+                                input(type="checkbox", name="capcha")
+                                b
+                            .forms__capcha-text I’m not a robot
+
+                        button.forms__submit-btn(type="submite")
+                            span Отправить
+                            +svg('sumbit-arrow')
+    
+    .forms__desc © 2021 Univerum - Производство электронных устройств 

@@ -1,0 +1,229 @@
+.forms {
+  background: #3e00d0;
+
+  .title {
+    margin-bottom: vw(72);
+    font-size: vw(45);
+    line-height: 150%;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  &__wrapper {
+    width: 100%;
+    padding-right: vw(10);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__row {
+    width: calc(50% - 7.6vw / 2);
+    margin-bottom: vw(-56);
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    width: 100%;
+    border-bottom: vw(2) solid #fff;
+    margin-bottom: vw(56);
+
+    &.active {
+      .forms__placeholder {
+        top: vw(-27);
+        left: 0;
+        font-weight: 450;
+        font-size: vw(16);
+      }
+    }
+  }
+
+  &__input,
+  &__textarea {
+    display: block;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: vw(41);
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    font-weight: 450;
+    font-size: vw(22);
+    line-height: 135%;
+    color: #ffffff;
+  }
+
+  &__textarea {
+    resize: none;
+    height: vw(196);
+    padding: vw(18) vw(24);
+
+    &-wrapper {
+      margin-top: vw(43);
+      border: vw(2) solid #fff;
+      margin-bottom: 0;
+
+      .forms__placeholder {
+        top: vw(18);
+        left: vw(24);
+      }
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: vw(4);
+    font-weight: 450;
+    font-size: vw(22);
+    line-height: 135%;
+    color: rgba(255, 255, 255, 0.35);
+    transition: all 0.2s linear;
+  }
+
+  &__label-file {
+    background: 103% center / vw(48) vw(48) url(../images/svg/sprite.svg#downloads) no-repeat;
+    input {
+      opacity: 0;
+    }
+  }
+
+  &__disclamer-files {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.41vw);
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    font-size: vw(16);
+    line-height: 135%;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: vw(46);
+  }
+
+  &__capcha {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: vw(258);
+    height: vw(76);
+    padding: vw(24) vw(12);
+    background: #fafafa;
+    border: vw(1) solid #d6d6d6;
+    box-sizing: border-box;
+    box-shadow: 0 vw(1) vw(2) rgba(0, 0, 0, 0.101138);
+    border-radius: vw(3);
+
+    &:before {
+      @include pseudo;
+      right: vw(13);
+      top: vw(11);
+      width: vw(56);
+      height: vw(57);
+      background: center / cover url(../images/recapcha.png) no-repeat;
+    }
+
+    &-label {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: vw(28);
+      height: vw(28);
+      cursor: pointer;
+
+      input {
+        display: none;
+
+        & ~ b {
+          display: block;
+          width: vw(28);
+          height: vw(28);
+          background: #ffffff;
+          border: vw(2) solid #c1c1c1;
+          box-sizing: border-box;
+          border-radius: vw(2);
+        }
+
+        &:checked ~ b {
+          &:before {
+            @include pseudo;
+            @include сentering-xy;
+            width: vw(20);
+            height: vw(20);
+            background: center / cover url(../images/svg/sprite.svg#check) no-repeat;
+          }
+        }
+      }
+    }
+
+    &-text {
+      display: block;
+      padding-left: vw(12);
+      font-weight: normal;
+      font-size: vw(14);
+      line-height: vw(16);
+      color: #000000;
+    }
+  }
+
+  &__submit-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    span {
+      display: block;
+      margin-right: vw(24);
+      font-weight: 600;
+      font-size: vw(25);
+      line-height: 150%;
+      color: #ffffff;
+    }
+
+    svg {
+      display: block;
+      width: vw(55);
+      height: vw(22);
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: vw(68);
+    display: block;
+    font-weight: 450;
+    font-size: vw(18);
+    line-height: 180%;
+    color: #ffffff;
+  }
+}
