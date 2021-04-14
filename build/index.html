@@ -303,24 +303,24 @@
               <div class="container"> 
                 <div class="forms__wrapper"> 
                   <p class="title">обсудим ваш проект?</p>
-                  <form class="forms__content" action="">
+                  <form class="forms__content" action="assets/php/form1.php" method="post" id="form1" name="call-form">
                     <div class="forms__row">
                       <label class="forms__label"><span class="forms__placeholder">Ваше имя</span>
-                        <input class="forms__input" type="text" name="имя">
+                        <input class="forms__input" type="text" name="имя" required autocomplete="off">
                       </label>
                       <label class="forms__label"><span class="forms__placeholder">Email</span>
-                        <input class="forms__input" type="email" name="почта">
+                        <input class="forms__input" type="email" name="почта" required autocomplete="off">
                       </label>
                       <label class="forms__label"><span class="forms__placeholder">Номер телефона</span>
-                        <input class="forms__input" type="text" name="номер">
+                        <input class="forms__input" type="text" name="номер" required autocomplete="off">
                       </label>
                       <label class="forms__label forms__label-file"><span class="forms__placeholder">Прикрепить файл</span>
-                        <input class="forms__input" type="file" name="файл"><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
+                        <input class="forms__input" type="file" name="файл" required autocomplete="off"><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
                       </label>
                     </div>
                     <div class="forms__row">
                       <label class="forms__label forms__textarea-wrapper"><span class="forms__placeholder">Описание задачи</span>
-                        <textarea class="forms__textarea" name="задача"> </textarea>
+                        <textarea class="forms__textarea" name="задача" required autocomplete="off"> </textarea>
                       </label>
                       <div class="forms__submit">
                         <div class="forms__capcha">
@@ -329,13 +329,14 @@
                           </label>
                           <div class="forms__capcha-text">I’m not a robot</div>
                         </div>
-                        <button class="forms__submit-btn" type="submite"><span>Отправить</span>
+                        <button class="forms__submit-btn" type="submit"><span>Отправить</span>
                           <svg>
                             <use xlink:href="./assets/images/svg/sprite.svg#sumbit-arrow"></use>
                           </svg>
                         </button>
                       </div>
                     </div>
+                    <input class="call-control" autocomplete="off" type="hidden" name="call-control" value="0">
                   </form>
                 </div>
               </div>

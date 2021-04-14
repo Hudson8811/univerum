@@ -3,29 +3,29 @@
         .forms__wrapper 
             +title('обсудим ваш проект?')
 
-            form.forms__content(action="")
+            form.forms__content(action="assets/php/form1.php" method="post" id="form1" name="call-form")
                 .forms__row
                     label.forms__label
                         span.forms__placeholder Ваше имя
-                        input.forms__input(type="text", name="имя")
+                        input.forms__input(type="text", name="имя",required, autocomplete="off")
 
                     label.forms__label
                         span.forms__placeholder Email
-                        input.forms__input(type="email", name="почта")
+                        input.forms__input(type="email", name="почта",required, autocomplete="off")
 
                     label.forms__label
                         span.forms__placeholder Номер телефона
-                        input.forms__input(type="text", name="номер")
+                        input.forms__input(type="text", name="номер",required, autocomplete="off")
 
                     label.forms__label.forms__label-file
                         span.forms__placeholder Прикрепить файл
-                        input.forms__input(type="file", name="файл")
+                        input.forms__input(type="file", name="файл",required, autocomplete="off")
                         span.forms__disclamer-files Максимум 3 файла, до 8 мб. каждый
                 
                 .forms__row
                     label.forms__label.forms__textarea-wrapper
                         span.forms__placeholder Описание задачи
-                        textarea.forms__textarea(name="задача") 
+                        textarea.forms__textarea(name="задача",required, autocomplete="off") 
                     .forms__submit
                         .forms__capcha
                             label.forms__capcha-label
@@ -33,8 +33,10 @@
                                 b
                             .forms__capcha-text I’m not a robot
 
-                        button.forms__submit-btn(type="submite")
+                        button.forms__submit-btn(type="submit")
                             span Отправить
                             +svg('sumbit-arrow')
+                
+                input(autocomplete="off" type="hidden" name="call-control" class="call-control" value="0")
     
     .forms__desc © 2021 Univerum - Производство электронных устройств 
