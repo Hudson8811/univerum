@@ -5,6 +5,10 @@
   &__wrapper {
     padding-right: vw(10);
     width: 100%;
+
+    @include mq('tablet-wide') {
+      padding-right: 0;
+    }
   }
 
   &__item {
@@ -24,6 +28,10 @@
 
     & + & {
       margin-top: 48px;
+
+      @include mq('tablet-wide') {
+        margin-top: vwm(23);
+      }
     }
   }
 
@@ -49,6 +57,11 @@
     font-size: vw(45);
     line-height: 150%;
     color: #ffffff;
+
+    @include mq('tablet-wide') {
+      font-size: vwm(16);
+      padding-right: vwm(10);
+    }
   }
 
   &__burger {
@@ -74,12 +87,32 @@
         transform: rotate(90deg);
       }
     }
+
+    @include mq('tablet-wide') {
+      width: vwm(23);
+      height: vwm(23);
+      border: vwm(1) solid #ffffff;
+
+      span {
+        width: vwm(11);
+        height: vwm(1);
+      }
+    }
   }
 
   &__content {
     display: none;
     padding: vw(24) 0;
     max-width: vw(900);
+
+    @include mq('tablet-wide') {
+      padding: vwm(16) 0;
+      max-width: vwm(223);
+
+      .nowrap {
+        white-space: normal;
+      }
+    }
   }
 
   &__desc {
@@ -89,8 +122,16 @@
     line-height: 135%;
     color: #cad0e3;
 
+    @include mq('tablet-wide') {
+      font-size: vwm(11);
+    }
+
     & + & {
       margin-top: vw(10);
+
+      @include mq('tablet-wide') {
+        margin-top: vwm(10);
+      }
     }
   }
 }

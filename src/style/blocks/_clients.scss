@@ -1,6 +1,9 @@
 .clients {
   background-color: #13161f;
 
+  @include mq('tablet-wide') {
+    background: #23285f;
+  }
   &__content {
     max-width: vw(648);
     margin-left: auto;
@@ -8,6 +11,17 @@
     .title {
       margin-bottom: vw(80);
       transform: translateX(100vw);
+    }
+
+    @include mq('tablet-wide') {
+      max-width: none;
+      padding-right: vwm(31);
+
+      .title {
+        font-size: vwm(20);
+        width: auto;
+        margin-bottom: vwm(24);
+      }
     }
   }
 
@@ -33,6 +47,10 @@
 
     & + & {
       margin-top: vw(48);
+
+      @include mq('tablet-wide') {
+        margin-top: vwm(10);
+      }
     }
   }
 }

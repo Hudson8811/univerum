@@ -1,13 +1,27 @@
 .havystages {
   background-color: #081529;
+  @include mq('tablet-wide') {
+    background-position: 65% 50%;
+  }
 
   .title {
     padding-bottom: vw(74);
+
+    @include mq('tablet-wide') {
+      padding-bottom: 0;
+      font-size: vwm(20);
+      margin-bottom: vwm(24);
+    }
   }
 
   &__content {
     max-width: vw(648);
     margin-left: auto;
+
+    @include mq('tablet-wide') {
+      max-width: none;
+      padding-right: vwm(31);
+    }
   }
 
   &__item {
@@ -18,12 +32,20 @@
     color: #ffffff;
     transform: translateX(100vw);
 
+    @include mq('tablet-wide') {
+      font-size: vwm(12);
+    }
+
     &:nth-child(1) {
       transition: 0s transform 0.2s;
     }
 
     &:nth-child(2) {
       transition: 0.1s transform 0.2s;
+
+      @include mq('tablet-wide') {
+        display: none;
+      }
     }
 
     & + & {

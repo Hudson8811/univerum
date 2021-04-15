@@ -1,5 +1,9 @@
 body {
   @include font-source-sans(1.3vw, #ffffff, 400, false);
+
+  @include mq('tablet-wide') {
+    font-size: vwm(12);
+  }
 }
 
 html,
@@ -35,7 +39,12 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-grow: 1;
+
+  @include mq('tablet-wide') {
+    max-width: none;
+    width: calc(100vw - 30px);
+    display: block;
+  }
 }
 
 .nowrap {

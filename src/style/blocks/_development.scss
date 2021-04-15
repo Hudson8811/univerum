@@ -1,3 +1,7 @@
 .development {
   background-color: #13161f;
+
+  @include mq('tablet-wide') {
+    background-position: 75% 50%;
+  }
 }

@@ -7,11 +7,20 @@
     line-height: 150%;
     color: #ffffff;
     white-space: nowrap;
+
+    @include mq('tablet-wide') {
+      font-size: vwm(20);
+      margin-bottom: vwm(40);
+    }
   }
 
   &__wrapper {
     width: 100%;
     padding-right: vw(10);
+
+    @include mq('tablet-wide') {
+      padding-right: 0;
+    }
   }
 
   &__content {
@@ -24,6 +33,10 @@
   &__row {
     width: calc(50% - 7.6vw / 2);
     margin-bottom: vw(-56);
+
+    @include mq('tablet-wide') {
+      width: 100%;
+    }
   }
 
   &__label {
@@ -33,12 +46,22 @@
     border-bottom: vw(2) solid #fff;
     margin-bottom: vw(56);
 
+    @include mq('tablet-wide') {
+      border-bottom: vwm(1) solid #fff;
+      margin-bottom: vwm(32);
+    }
+
     &.active {
       .forms__placeholder {
         top: vw(-27);
         left: 0;
         font-weight: 450;
         font-size: vw(16);
+
+        @include mq('tablet-wide') {
+          top: vwm(-10);
+          font-size: vwm(10);
+        }
       }
     }
   }
@@ -60,6 +83,11 @@
     font-size: vw(22);
     line-height: 135%;
     color: #ffffff;
+
+    @include mq('tablet-wide') {
+      height: vwm(28);
+      font-size: vwm(14);
+    }
   }
 
   &__textarea {
@@ -87,12 +115,35 @@
     line-height: 135%;
     color: rgba(255, 255, 255, 0.35);
     transition: all 0.2s linear;
+
+    @include mq('tablet-wide') {
+      font-size: vwm(14);
+    }
   }
 
   &__label-file {
     background: 103% center / vw(48) vw(48) url(../images/svg/sprite.svg#downloads) no-repeat;
     input {
       opacity: 0;
+    }
+
+    @include mq('tablet-wide') {
+      background: 103% center / vwm(48) vwm(48) url(../images/svg/sprite.svg#downloads) no-repeat;
+    }
+  }
+
+  &__file-name {
+    top: 0;
+    position: absolute;
+    height: vw(41);
+    font-weight: 450;
+    font-size: vw(22);
+    line-height: 135%;
+    color: #ffffff;
+
+    @include mq('tablet-wide') {
+      height: vwm(28);
+      font-size: vwm(14);
     }
   }
 
@@ -107,6 +158,11 @@
     line-height: 135%;
     text-align: right;
     color: rgba(255, 255, 255, 0.35);
+
+    @include mq('tablet-wide') {
+      top: calc(100% + 2.5vw);
+      font-size: vwm(10);
+    }
   }
 
   &__submit {
@@ -196,7 +252,7 @@
     appearance: none;
     cursor: pointer;
 
-    &.disabled {
+    &:disabled {
       pointer-events: none;
       opacity: 0.5;
     }

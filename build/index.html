@@ -17,21 +17,42 @@
         </svg>
         <svg>
           <use xlink:href="./assets/images/svg/sprite.svg#mouse-arrow"></use>
+        </svg>
+        <svg>
+          <use xlink:href="./assets/images/svg/sprite.svg#mobile-btn"></use>
         </svg></a><a class="logo-btn" id="logo-btn" href="#">
         <svg>
           <use xlink:href="./assets/images/svg/sprite.svg#logo"></use>
         </svg></a>
       <header class="header">
-        <p class="header__title">отрасли</p>
+        <p class="header__title"><img src="assets/images/title.png" alt=""></p>
         <ul class="header__menu">
-          <li class="header__item"><a class="header__link" href="#">
+          <li class="header__item">
+            <div class="header__pic">
+              <div class="header__pic-title">Робототехника</div>
+              <ul class="header__pic-list">
+                <li class="header__pic-item">Промышленные роботы</li>
+                <li class="header__pic-item">Роботы для складов</li>
+                <li class="header__pic-item">Автоматизированные тележки</li>
+              </ul>
+            </div><a class="header__link" href="#">
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#settings"></use>
-              </svg></a></li>
-          <li class="header__item"><a class="header__link" href="#">
+              </svg></a>
+          </li>
+          <li class="header__item">
+            <div class="header__pic">
+              <div class="header__pic-title">потребительская электроника</div>
+              <ul class="header__pic-list">
+                <li class="header__pic-item">Промышленные роботы</li>
+                <li class="header__pic-item">Роботы для складов</li>
+                <li class="header__pic-item">Автоматизированные тележки</li>
+              </ul>
+            </div><a class="header__link" href="#">
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#home"></use>
-              </svg></a></li>
+              </svg></a>
+          </li>
           <li class="header__item"><a class="header__link" href="#">
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#heart"></use>
@@ -185,11 +206,43 @@
               <div class="container">
                 <div class="confident__content"> 
                   <p class="title">конфиденциальность</p>
-                  <p class="confident__item">Заключаем соглашения о неразглашении.</p>
-                  <p class="confident__item">Конфиденциальность защищает не только продукт разработки, но и любые идеи Заказчика.</p>
-                  <p class="confident__item">Если мы уже участвуем в разработке, которая может быть расценена для Заказчика как конкурентная, об этом Заказчик сразу информируется.</p>
-                  <p class="confident__item">Никакие сформированные и переданные технические решения, сделанные для одного Заказчика, не используются в других конкурентных проектах.</p>
-                  <p class="confident__item">Если у нас есть ограничения прошлых или текущих проектов, которые влияют на проект нового Заказчика, мы не заключаем контракт и советуем обратиться в иные компании.</p>
+                  <div class="confident__slider">
+                    <div class="confident__item-wrapper">
+                      <p class="confident__item">Заключаем соглашения о неразглашении.
+                        <svg>
+                          <use xlink:href="./assets/images/svg/sprite.svg#mobile-slider-btn"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <div class="confident__item-wrapper">
+                      <p class="confident__item">Конфиденциальность защищает не только продукт разработки, но и любые идеи Заказчика.
+                        <svg>
+                          <use xlink:href="./assets/images/svg/sprite.svg#mobile-slider-btn"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <div class="confident__item-wrapper">
+                      <p class="confident__item">Если мы уже участвуем в разработке, которая может быть расценена для Заказчика как конкурентная, об этом Заказчик сразу информируется.
+                        <svg>
+                          <use xlink:href="./assets/images/svg/sprite.svg#mobile-slider-btn"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <div class="confident__item-wrapper">
+                      <p class="confident__item">Никакие сформированные и переданные технические решения, сделанные для одного Заказчика, не используются в других конкурентных проектах.
+                        <svg>
+                          <use xlink:href="./assets/images/svg/sprite.svg#mobile-slider-btn"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <div class="confident__item-wrapper">
+                      <p class="confident__item">Если у нас есть ограничения прошлых или текущих проектов, которые влияют на проект нового Заказчика, мы не заключаем контракт и советуем обратиться в иные компании.
+                        <svg>
+                          <use xlink:href="./assets/images/svg/sprite.svg#mobile-slider-btn"></use>
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -306,21 +359,21 @@
                   <form class="forms__content" action="assets/php/form1.php" method="post" id="form1" name="call-form">
                     <div class="forms__row">
                       <label class="forms__label"><span class="forms__placeholder">Ваше имя</span>
-                        <input class="forms__input" type="text" name="имя" required autocomplete="off">
+                        <input class="forms__input" type="text" name="name" required autocomplete="off">
                       </label>
                       <label class="forms__label"><span class="forms__placeholder">Email</span>
-                        <input class="forms__input" type="email" name="почта" required autocomplete="off">
+                        <input class="forms__input" type="email" name="mail" required autocomplete="off">
                       </label>
                       <label class="forms__label"><span class="forms__placeholder">Номер телефона</span>
-                        <input class="forms__input" type="text" name="номер" required autocomplete="off">
+                        <input class="forms__input" type="text" name="phone" required autocomplete="off">
                       </label>
                       <label class="forms__label forms__label-file"><span class="forms__placeholder">Прикрепить файл</span>
-                        <input class="forms__input" type="file" name="файл" required autocomplete="off"><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
+                        <input class="forms__input" type="file" name="file" required autocomplete="off"><span class="forms__file-name"></span><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
                       </label>
                     </div>
                     <div class="forms__row">
                       <label class="forms__label forms__textarea-wrapper"><span class="forms__placeholder">Описание задачи</span>
-                        <textarea class="forms__textarea" name="задача" required autocomplete="off"> </textarea>
+                        <textarea class="forms__textarea" name="text" required autocomplete="off"> </textarea>
                       </label>
                       <div class="forms__submit">
                         <div class="forms__capcha">
@@ -329,7 +382,7 @@
                           </label>
                           <div class="forms__capcha-text">I’m not a robot</div>
                         </div>
-                        <button class="forms__submit-btn" type="submit"><span>Отправить</span>
+                        <button class="forms__submit-btn" type="submit" disabled><span>Отправить</span>
                           <svg>
                             <use xlink:href="./assets/images/svg/sprite.svg#sumbit-arrow"></use>
                           </svg>

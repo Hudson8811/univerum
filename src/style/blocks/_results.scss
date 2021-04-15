@@ -9,6 +9,12 @@
     width: vw(1186);
     height: vw(1000);
     background: center / cover url(../images/results-before.png) no-repeat;
+
+    @include mq('tablet-wide') {
+      width: vwm(285);
+      height: vwm(234);
+      background: center / cover url(../images/mobile-results.png) no-repeat;
+    }
   }
 
   .title {
@@ -16,11 +22,20 @@
     font-size: vw(45);
     color: #13161f;
     white-space: nowrap;
+
+    @include mq('tablet-wide') {
+      font-size: vwm(20);
+      margin-bottom: vwm(24);
+    }
   }
 
   &__content {
     position: relative;
     z-index: 2;
+
+    @include mq('tablet-wide') {
+      padding-right: vwm(31);
+    }
   }
 
   &__desc {
@@ -32,6 +47,10 @@
     color: #757883;
     transform: translateX(-100vw);
     transition: 0s transform 0.2s;
+
+    @include mq('tablet-wide') {
+      display: none;
+    }
   }
 
   &__item {
@@ -42,8 +61,16 @@
     color: #13161f;
     transform: translateX(-100vw);
 
+    @include mq('tablet-wide') {
+      font-size: vwm(12);
+    }
+
     & + & {
       margin-top: vw(20);
+
+      @include mq('tablet-wide') {
+        margin-top: vwm(10);
+      }
     }
 
     &:nth-child(3) {

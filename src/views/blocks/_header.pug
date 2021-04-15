@@ -1,16 +1,30 @@
 a.to-top-btn#to-top-btn(href="#")
     +svg('mouse')
     +svg('mouse-arrow')
+    +svg('mobile-btn')
 a.logo-btn#logo-btn(href="#")
     +svg('logo')
 
 header.header
-    p.header__title отрасли
+    p.header__title
+        img(src="assets/images/title.png", alt="")
     ul.header__menu
         li.header__item
+            .header__pic
+                .header__pic-title Робототехника
+                ul.header__pic-list
+                    li.header__pic-item Промышленные роботы
+                    li.header__pic-item Роботы для складов
+                    li.header__pic-item Автоматизированные тележки
             a.header__link(href="#")
                 +svg('settings')
         li.header__item
+            .header__pic
+                .header__pic-title потребительская электроника
+                ul.header__pic-list
+                    li.header__pic-item Промышленные роботы
+                    li.header__pic-item Роботы для складов
+                    li.header__pic-item Автоматизированные тележки
             a.header__link(href="#")
                 +svg('home')
         li.header__item

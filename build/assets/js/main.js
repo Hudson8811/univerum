@@ -158,7 +158,13 @@ function animations(scroll){
 
    
 }
-
+const settings = {
+    infinite:false,
+    arrows:false,
+    speed: 300,
+    slidesToShow: 1,
+    variableWidth: true
+}
 function fixPos(){
     let leftCoordination = $('.container').css('margin-left')
     let headerWidth = $('.header').css('width')
@@ -166,6 +172,19 @@ function fixPos(){
     $('#to-top-btn').css({left: `${leftCoordination}`})
     $('.forms__desc').css({left: `${leftCoordination}`})
     $('.header').css({right: `calc(${leftCoordination} - ${headerWidth})`})
+
+    if($(window).width() < 1024){
+        if(!$('.confident__slider').hasClass('slick-initialized')){
+            $('.confident__slider').slick(settings)
+        }
+        
+    } else{
+
+        if($('.confident__slider').hasClass('slick-initialized')){
+            $('.confident__slider').slick('unslick')
+        }
+       
+    }
 }
 
 $(window).resize(function(){
@@ -189,6 +208,15 @@ $(document).ready(function(){
         vertical: true,
         verticalSwiping: true,
         slidesToShow: 8,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 3,
+              }
+            },
+        ]
     });
     var	wheel = 0;
 	var	newDate = new Date();
@@ -238,21 +266,51 @@ $(document).ready(function(){
         fullpage_api.moveSectionDown()
     })
 
-    if($('.forms__capcha-label input[type="checkbox]').attr('checked', false)){
-        $('.forms__submit-btn').addClass('disabled')
+    if($('input[type="checkbox"]').prop('checked')){
+        $('.forms__submit-btn').attr('disabled', false);
+    }else{
+        $('.forms__submit-btn').attr('disabled', true);
     }
 
-    $('.forms__input, .forms__textarea').focus(function(){
+    $(document).on('change', 'input[type="checkbox"]', function(){
+        console.log('up')
+        if($('input[type="checkbox"]').prop('checked')){
+        $('.forms__submit-btn').attr('disabled', false);
+        }else{
+        $('.forms__submit-btn').attr('disabled', true);
+        }
+    });
+
+
+    $('.forms__input[type="text"], .forms__textarea, .forms__input[type="email"]').focus(function(){
         console.log('focus')
         $(this).parent('.forms__label').addClass('active')
     })
 
-    $('.forms__input, .forms__textarea').blur(function(){
+    $('.forms__input[type="text"], .forms__textarea, .forms__input[type="email"]').blur(function(){
         console.log('blur', $(this).val())
         if(!$(this).val()){
-            $(this).parent('.forms__label').removeClass('active') 
+            $(this).parent('.forms__label').removeClass('active').addClass('error')
         }
     })
+    $('.message-btn').click(function(e){
+        e.preventDefault()
+        fullpage_api.moveTo(10)
+    })
+    
+    $('.confident__item svg').click(function(){
+        $('.confident__slider').slick('next')
+    })
+
+    $(document).on('change','.forms__label-file input[type="file"]', function(){
+        var file = $(this)[0].files[0]
+            if (file){
+            $(this).parent('.forms__label-file').addClass('active');
+              $('.forms__file-name').text(file.name);
+            } else{
+                $(this).parent('.forms__label-file').addClass('error');
+            }
+    });
 })
 function fullpage_toggle(toggle, direction) {
     $.fn.fullpage.setAllowScrolling(toggle, direction);
@@ -267,7 +325,7 @@ $('#fullpage').fullpage({
     loopHorizontal: false,
     //scrollOverflow: false,
     bigSectionsDestination: top,
-    normalScrollElements: '.section[data-section-id="3"]',
+    normalScrollElements: '',
     //normalScrollElements: '.contacts',
     autoScrolling: false,
     keyboardScrolling: true,
@@ -311,35 +369,45 @@ $('#fullpage').fullpage({
         if(destination.index == 3){
             $('#to-top-btn').removeClass('dark')
             $('#logo-btn svg').removeClass().addClass('index2')
+            $('header').removeClass('hide')
         }
 
         if(destination.index == 4){
             $('#to-top-btn').removeClass('dark')
             $('#logo-btn svg').removeClass().addClass('index2')
+
+            if($(window).width() < 1024){
+                $('header').addClass('hide')
+            }
         }
 
         if(destination.index == 5){
             $('#logo-btn svg').removeClass().addClass('index1')
             $('#to-top-btn').addClass('dark')
+            $('header').removeClass('hide')
         }
         if(destination.index == 6){
             $('#logo-btn svg').removeClass().addClass('index2')
             $('#to-top-btn').removeClass('dark')
+            $('header').removeClass('hide')
         }
 
         if(destination.index == 7){
             $('#logo-btn svg').removeClass().addClass('index2')
             $('#to-top-btn').removeClass('dark')
+            $('header').addClass('hide')
         }
 
         if(destination.index == 8){
             $('#logo-btn svg').removeClass().addClass('index1')
             $('#to-top-btn').addClass('dark').removeClass('hide')
+            $('header').removeClass('hide')
         }
 
         if(destination.index == 9){
             $('#logo-btn svg').removeClass().addClass('index2')
             $('#to-top-btn').addClass('dark').addClass('hide')
+            $('header').addClass('hide')
         }
     }
 });
@@ -348,22 +416,32 @@ $('#fullpage').fullpage({
 
 $('.stages__slider').on('afterChange', function(event, slick, currentSlide) {
     console.log(currentSlide)
-    if(currentSlide == 0){
-        fullpage_toggle(true,'up');
-    }
 
-    if(currentSlide == 2){
-        fullpage_toggle(true,'down');
+    if($(window).width() <1024){
+        if(currentSlide == 0){
+            fullpage_toggle(true,'up');
+        }
+    
+        if(currentSlide == 6){
+            fullpage_toggle(true,'down');
+        }
+
+    } else{
+        if(currentSlide == 0){
+            fullpage_toggle(true,'up');
+        }
+    
+        if(currentSlide == 2){
+            fullpage_toggle(true,'down');
+        }
     }
+    
 });
 
 $("#form1").submit(function(){
-		
-		
-		
     $.ajax({ 
         type: "POST", 
-        url: "assets/form1.php",
+        url: "assets/php/form1.php",
         data: $("#form1").serialize(),
         success: function(html) { 
         }

@@ -6,4 +6,8 @@
   width: min-content;
   transition: 0.2s transform 0.5s;
   transform: translateX(-100vw);
+
+  @include mq('tablet-wide') {
+    font-size: vwm(24);
+  }
 }

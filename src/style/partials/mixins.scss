@@ -153,3 +153,7 @@ $breakpoints: (
 @function vw($px) {
   @return (($px/1920) * 100) + vw;
 }
+
+@function vwm($px) {
+  @return (($px/320) * 100) + vw;
+}

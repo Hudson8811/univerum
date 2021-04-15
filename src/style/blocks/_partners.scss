@@ -6,11 +6,20 @@
     margin-bottom: vw(87);
     white-space: nowrap;
     color: #13161f;
+
+    @include mq('tablet-wide') {
+      font-size: vwm(20);
+      margin-bottom: vwm(40);
+    }
   }
 
   &_content {
     width: 100%;
     padding-right: vw(10);
+
+    @include mq('tablet-wide') {
+      padding-right: 0;
+    }
   }
 
   &__wrapper {
@@ -20,6 +29,11 @@
     flex-wrap: wrap;
     margin-bottom: vw(-90);
     margin-left: vw(-75);
+
+    @include mq('tablet-wide') {
+      margin-left: 0;
+      margin-bottom: vwm(-30);
+    }
   }
 
   &__item {
@@ -29,12 +43,22 @@
     align-items: center;
     margin-bottom: vw(90);
 
+    @include mq('tablet-wide') {
+      margin-bottom: vwm(30);
+      width: 50%;
+    }
+
     &:nth-child(1) {
       svg,
       img {
         display: block;
         width: vw(178);
         height: vw(56);
+
+        @include mq('tablet-wide') {
+          width: vwm(83);
+          height: vwm(26);
+        }
       }
     }
 
@@ -44,6 +68,11 @@
         display: block;
         width: vw(118);
         height: vw(53);
+
+        @include mq('tablet-wide') {
+          width: vwm(40);
+          height: vwm(18);
+        }
       }
     }
 
@@ -53,6 +82,11 @@
         display: block;
         width: vw(68);
         height: vw(94);
+
+        @include mq('tablet-wide') {
+          width: vwm(27);
+          height: vwm(37);
+        }
       }
     }
 
@@ -62,6 +96,11 @@
         display: block;
         width: vw(181);
         height: vw(56);
+
+        @include mq('tablet-wide') {
+          width: vwm(71);
+          height: vwm(23);
+        }
       }
     }
 
@@ -71,6 +110,11 @@
         display: block;
         width: vw(192);
         height: vw(28);
+
+        @include mq('tablet-wide') {
+          width: vwm(85);
+          height: vwm(13);
+        }
       }
     }
 
@@ -80,6 +124,11 @@
         display: block;
         width: vw(186);
         height: vw(20);
+
+        @include mq('tablet-wide') {
+          width: vwm(72);
+          height: vwm(7);
+        }
       }
     }
 
@@ -89,6 +138,11 @@
         display: block;
         width: vw(42);
         height: vw(88);
+
+        @include mq('tablet-wide') {
+          width: vwm(20);
+          height: vwm(42);
+        }
       }
     }
 
@@ -98,6 +152,11 @@
         display: block;
         width: vw(216);
         height: vw(58);
+
+        @include mq('tablet-wide') {
+          width: vwm(74);
+          height: vwm(20);
+        }
       }
     }
 
@@ -107,6 +166,11 @@
         display: block;
         width: vw(137);
         height: vw(64);
+
+        @include mq('tablet-wide') {
+          width: vwm(60);
+          height: vwm(29);
+        }
       }
     }
 
@@ -116,6 +180,11 @@
         display: block;
         width: vw(169);
         height: vw(61);
+
+        @include mq('tablet-wide') {
+          width: vwm(60);
+          height: vwm(22);
+        }
       }
     }
   }

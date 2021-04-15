@@ -10,6 +10,10 @@
     left: vw(77);
     bottom: vw(91);
     background: center / cover url('../images/confident-before.png') no-repeat;
+
+    @include mq('tablet-wide') {
+      display: none;
+    }
   }
 
   &:after {
@@ -20,15 +24,39 @@
     right: vw(-610);
     transform: translateY(-50%);
     background: center / cover url('../images/confident-after.png') no-repeat;
+
+    @include mq('tablet-wide') {
+      width: vwm(616);
+      height: vwm(452);
+      right: vwm(-171);
+    }
   }
 
   .title {
     font-size: vw(45);
     margin-bottom: vw(58);
+
+    @include mq('tablet-wide') {
+      font-size: vwm(20);
+      margin-bottom: vwm(30);
+    }
   }
 
   &__content {
     max-width: vw(962);
+
+    @include mq('tablet-wide') {
+      position: relative;
+      max-width: none;
+      z-index: 2;
+    }
+  }
+
+  &__slider {
+    @include mq('tablet-wide') {
+      width: 100vw;
+      margin-left: -15px;
+    }
   }
 
   &__item {
@@ -38,6 +66,20 @@
     line-height: 150%;
     color: #ffffff;
     transform: translateX(-100vw);
+
+    &-wrapper {
+      & + & {
+        margin-top: vw(20);
+
+        @include mq('tablet-wide') {
+          margin-top: 0;
+        }
+      }
+    }
+
+    svg {
+      display: none;
+    }
 
     &:nth-child(2) {
       transition: 0s transform 0.2s;
@@ -59,8 +101,28 @@
       transition: 0.4s transform 0.2s;
     }
 
-    & + & {
-      margin-top: vw(20);
+    @include mq('tablet-wide') {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: vwm(249);
+      margin: 0 vwm(10);
+      background: rgba(9, 8, 51, 0.82);
+      min-height: vwm(179);
+      padding: vwm(16) vwm(40) vwm(16) vwm(16);
+      font-size: vwm(14);
+
+      svg {
+        position: absolute;
+        z-index: 2;
+        right: vwm(16);
+        bottom: vwm(16);
+        display: block;
+        width: vwm(20);
+        height: vwm(28);
+        cursor: pointer;
+      }
     }
   }
 }
