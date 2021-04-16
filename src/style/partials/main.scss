@@ -27,13 +27,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
-  @media screen and(max-height:767px) and (orientation: landscape) {
-    height: 100%;
+  // @media screen and(max-height:767px) and (orientation: landscape) {
+  //   height: 100%;
 
-    .container {
-      padding: vwm(20) 0;
-    }
-  }
+  //   .container {
+  //     padding: vwm(20) 0;
+  //   }
+  // }
 }
 
 .section {
@@ -43,10 +43,10 @@ body {
   width: 100%;
   overflow: hidden;
 
-  @media screen and(max-height:767px) and (orientation: landscape) {
-    position: relative;
-    top: auto;
-  }
+  // @media screen and(max-height:767px) and (orientation: landscape) {
+  //   position: relative;
+  //   top: auto;
+  // }
 
   @include mq('tablet') {
   }

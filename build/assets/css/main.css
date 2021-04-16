@@ -108,11 +108,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  @media screen and (max-height: 767px) and (orientation: landscape) {
-    .section-wrapper {
-      height: 100%; }
-      .section-wrapper .container {
-        padding: 6.25vw 0; } }
 
 .section {
   position: sticky;
@@ -120,10 +115,6 @@ body {
   top: 0;
   width: 100%;
   overflow: hidden; }
-  @media screen and (max-height: 767px) and (orientation: landscape) {
-    .section {
-      position: relative;
-      top: auto; } }
 
 .container {
   width: calc(100% - 30px);
@@ -240,9 +231,6 @@ body {
   width: 13.17708vw;
   height: 2.23958vw;
   text-decoration: none; }
-  @media screen and (max-height: 767px) and (orientation: landscape) {
-    .logo-btn {
-      opacity: 0; } }
   @media only screen and (max-width: 767px) {
     .logo-btn {
       width: 40vw;
@@ -279,9 +267,6 @@ body {
   display: block;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear; }
-  @media screen and (max-height: 767px) and (orientation: landscape) {
-    .to-top-btn {
-      opacity: 0; } }
   .to-top-btn svg {
     display: block;
     --fill: #ffffff; }
@@ -388,9 +373,6 @@ body {
   @media screen and (max-width: 1800px) {
     .header {
       right: 0 !important; } }
-  @media screen and (max-height: 767px) and (orientation: landscape) {
-    .header {
-      opacity: 0; } }
   @media only screen and (max-width: 767px) {
     .header {
       width: 14.375vw;
