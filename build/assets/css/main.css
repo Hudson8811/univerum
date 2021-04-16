@@ -110,9 +110,9 @@ body {
   background-repeat: no-repeat; }
   @media screen and (max-height: 800px) and (orientation: landscape) {
     .section-wrapper {
-      min-height: 100%;
-      height: auto;
-      padding: 6.25vw; } }
+      height: 100%; }
+      .section-wrapper .container {
+        padding: 6.25vw 0; } }
 
 .section {
   position: sticky;
@@ -1036,6 +1036,7 @@ body {
 
 .allstages {
   background-color: #030b26;
+  background-image: url("../images/allstages-bg.png");
   mix-blend-mode: lighten; }
   .allstages__wrapper {
     padding-right: 0.52083vw;
@@ -1310,7 +1311,6 @@ body {
   background: #3e00d0; }
   @media only screen and (max-width: 767px) {
     .forms {
-      padding: 30.625vw 0 31.875vw;
       height: 100%; } }
   .forms .title {
     margin-bottom: 3.75vw;
@@ -1327,7 +1327,11 @@ body {
     padding-right: 0.52083vw; }
     @media only screen and (max-width: 767px) {
       .forms__wrapper {
-        padding-right: 0; } }
+        padding-right: 0;
+        padding: 30.625vw 0 31.875vw;
+        height: 100%;
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box; } }
   .forms__content {
     display: -webkit-box;
     display: -ms-flexbox;

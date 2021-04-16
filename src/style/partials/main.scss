@@ -28,9 +28,11 @@ body {
   background-repeat: no-repeat;
 
   @media screen and(max-height:800px) and (orientation: landscape) {
-    min-height: 100%;
-    height: auto;
-    padding: vwm(20);
+    height: 100%;
+
+    .container {
+      padding: vwm(20) 0;
+    }
   }
 }
 

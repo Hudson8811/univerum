@@ -2,7 +2,6 @@
   background: #3e00d0;
 
   @include mq('tablet') {
-    padding: vwm(98) 0 vwm(102);
     height: 100%;
   }
 
@@ -25,6 +24,9 @@
 
     @include mq('tablet') {
       padding-right: 0;
+      padding: vwm(98) 0 vwm(102);
+      height: 100%;
+      box-sizing: content-box;
     }
   }
 
