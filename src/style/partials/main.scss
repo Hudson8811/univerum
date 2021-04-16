@@ -27,7 +27,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
-  @media screen and(max-height:800px) and (orientation: landscape) {
+  @media screen and(max-height:767px) and (orientation: landscape) {
     height: 100%;
 
     .container {
@@ -43,7 +43,7 @@ body {
   width: 100%;
   overflow: hidden;
 
-  @media screen and(max-height:800px) and (orientation: landscape) {
+  @media screen and(max-height:767px) and (orientation: landscape) {
     position: relative;
     top: auto;
   }

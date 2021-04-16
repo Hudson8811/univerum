@@ -108,7 +108,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  @media screen and (max-height: 800px) and (orientation: landscape) {
+  @media screen and (max-height: 767px) and (orientation: landscape) {
     .section-wrapper {
       height: 100%; }
       .section-wrapper .container {
@@ -120,7 +120,7 @@ body {
   top: 0;
   width: 100%;
   overflow: hidden; }
-  @media screen and (max-height: 800px) and (orientation: landscape) {
+  @media screen and (max-height: 767px) and (orientation: landscape) {
     .section {
       position: relative;
       top: auto; } }
