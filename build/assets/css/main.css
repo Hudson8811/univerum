@@ -691,7 +691,8 @@ body {
     width: 34.89583vw; }
     .stages__slider-wrapper {
       height: 35.83333vw;
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
       margin-right: -17px; }
       @media only screen and (max-width: 767px) {
         .stages__slider-wrapper {

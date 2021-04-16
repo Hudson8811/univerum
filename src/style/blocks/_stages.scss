@@ -19,7 +19,8 @@
   &__slider {
     &-wrapper {
       height: vw(688);
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
       margin-right: -17px;
 
       @include mq('tablet') {
