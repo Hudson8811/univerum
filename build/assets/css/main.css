@@ -85,6 +85,20 @@ body {
     body {
       font-size: 3.75vw; } }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -webkit-locale: auto;
+  white-space: normal; }
+
+html {
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
 html,
 body {
   scroll-behavior: smooth; }
@@ -426,7 +440,7 @@ body {
       margin-right: -28px; }
     .header__pic-title {
       display: block;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.5625vw;
       line-height: 150%;
       text-transform: uppercase;
@@ -437,7 +451,7 @@ body {
     .header__pic-item {
       display: block;
       position: relative;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.14583vw;
       line-height: 150%;
       color: #ffffff;
@@ -540,7 +554,7 @@ body {
     position: relative;
     display: block;
     font-weight: 600;
-    line-height: 1.92708vw;
+    line-height: 1.97917vw;
     color: #13161f;
     -webkit-transform: translateX(100vw);
             transform: translateX(100vw); }
@@ -692,6 +706,8 @@ body {
             height: 85.625vw; } }
         .stages__slider-wrapper-hide.active:before {
           opacity: 1; }
+        .stages__slider-wrapper-hide.active:after {
+          opacity: 0; }
         .stages__slider-wrapper-hide:before, .stages__slider-wrapper-hide:after {
           content: "";
           display: block;
@@ -777,7 +793,7 @@ body {
           margin-right: 3.75vw; } }
     .stages__item p {
       display: block;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 135%;
       color: #ffffff; }
       @media only screen and (max-width: 767px) {
@@ -1313,6 +1329,26 @@ body {
         .partners__item:nth-child(10) img {
           width: 18.75vw;
           height: 6.875vw; } }
+    .partners__item:nth-child(11) svg,
+    .partners__item:nth-child(11) img {
+      display: block;
+      width: 7.29167vw;
+      height: 2.91667vw; }
+      @media only screen and (max-width: 767px) {
+        .partners__item:nth-child(11) svg,
+        .partners__item:nth-child(11) img {
+          width: 18.75vw;
+          height: 7.5vw; } }
+    .partners__item:nth-child(12) svg,
+    .partners__item:nth-child(12) img {
+      display: block;
+      width: 10.41667vw;
+      height: 2.55208vw; }
+      @media only screen and (max-width: 767px) {
+        .partners__item:nth-child(12) svg,
+        .partners__item:nth-child(12) img {
+          width: 21.5625vw;
+          height: 5.3125vw; } }
 
 .forms {
   background: #3e00d0; }

@@ -187,5 +187,33 @@
         }
       }
     }
+
+    &:nth-child(11) {
+      svg,
+      img {
+        display: block;
+        width: vw(140);
+        height: vw(56);
+
+        @include mq('tablet') {
+          width: vwm(60);
+          height: vwm(24);
+        }
+      }
+    }
+
+    &:nth-child(12) {
+      svg,
+      img {
+        display: block;
+        width: vw(200);
+        height: vw(49);
+
+        @include mq('tablet') {
+          width: vwm(69);
+          height: vwm(17);
+        }
+      }
+    }
   }
 }

@@ -40,6 +40,10 @@
           &:before {
             opacity: 1;
           }
+
+          &:after {
+            opacity: 0;
+          }
         }
 
         &:before,
@@ -144,7 +148,7 @@
 
     p {
       display: block;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 135%;
       color: #ffffff;
 
