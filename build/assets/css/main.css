@@ -79,6 +79,8 @@ body {
   font-size: 1.3vw;
   color: #ffffff;
   font-weight: 400; }
+  body.hidden {
+    overflow: hidden !important; }
   @media only screen and (max-width: 1023px) {
     body {
       font-size: 3.75vw; } }
@@ -1264,6 +1266,10 @@ body {
 
 .forms {
   background: #3e00d0; }
+  @media only screen and (max-width: 1023px) {
+    .forms {
+      padding: 30.625vw 0 31.875vw;
+      height: auto; } }
   .forms .title {
     margin-bottom: 3.75vw;
     font-size: 2.34375vw;
@@ -1344,13 +1350,27 @@ body {
     resize: none;
     height: 10.20833vw;
     padding: 0.9375vw 1.25vw; }
+    @media only screen and (max-width: 1023px) {
+      .forms__textarea {
+        height: 42.5vw;
+        padding: 3.75vw 5vw; } }
     .forms__textarea-wrapper {
       margin-top: 2.23958vw;
       border: 0.10417vw solid #fff;
       margin-bottom: 0; }
+      @media only screen and (max-width: 1023px) {
+        .forms__textarea-wrapper {
+          margin-top: 8.75vw;
+          border: 0.625vw solid #fff; }
+          .forms__textarea-wrapper.active .forms__placeholder {
+            top: -6.25vw; } }
       .forms__textarea-wrapper .forms__placeholder {
         top: 0.9375vw;
         left: 1.25vw; }
+        @media only screen and (max-width: 1023px) {
+          .forms__textarea-wrapper .forms__placeholder {
+            top: 3.75vw;
+            left: 5vw; } }
   .forms__placeholder {
     position: absolute;
     top: 0.20833vw;
@@ -1408,6 +1428,10 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 2.39583vw; }
+    @media only screen and (max-width: 1023px) {
+      .forms__submit {
+        margin-top: 7.5vw;
+        display: block; } }
   .forms__capcha {
     position: relative;
     display: -webkit-box;
@@ -1429,6 +1453,15 @@ body {
     -webkit-box-shadow: 0 0.05208vw 0.10417vw rgba(0, 0, 0, 0.101138);
             box-shadow: 0 0.05208vw 0.10417vw rgba(0, 0, 0, 0.101138);
     border-radius: 0.15625vw; }
+    @media only screen and (max-width: 1023px) {
+      .forms__capcha {
+        width: 100%;
+        height: 23.75vw;
+        padding: 7.5vw 3.75vw;
+        border: 0.3125vw solid #d6d6d6;
+        -webkit-box-shadow: 0 0.3125vw 0.625vw rgba(0, 0, 0, 0.101138);
+                box-shadow: 0 0.3125vw 0.625vw rgba(0, 0, 0, 0.101138);
+        border-radius: 0.9375vw; } }
     .forms__capcha:before {
       content: "";
       display: block;
@@ -1438,6 +1471,12 @@ body {
       width: 2.91667vw;
       height: 2.96875vw;
       background: center/cover url(../images/recapcha.png) no-repeat; }
+      @media only screen and (max-width: 1023px) {
+        .forms__capcha:before {
+          right: 4.0625vw;
+          top: 3.4375vw;
+          width: 17.5vw;
+          height: 17.8125vw; } }
     .forms__capcha-label {
       position: relative;
       display: -webkit-box;
@@ -1454,6 +1493,10 @@ body {
       width: 1.45833vw;
       height: 1.45833vw;
       cursor: pointer; }
+      @media only screen and (max-width: 1023px) {
+        .forms__capcha-label {
+          width: 8.75vw;
+          height: 8.75vw; } }
       .forms__capcha-label input {
         display: none; }
         .forms__capcha-label input ~ b {
@@ -1465,6 +1508,12 @@ body {
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
           border-radius: 0.10417vw; }
+          @media only screen and (max-width: 1023px) {
+            .forms__capcha-label input ~ b {
+              width: 8.75vw;
+              height: 8.75vw;
+              border: 0.625vw solid #c1c1c1;
+              border-radius: 0.625vw; } }
         .forms__capcha-label input:checked ~ b:before {
           content: "";
           display: block;
@@ -1477,6 +1526,10 @@ body {
           width: 1.04167vw;
           height: 1.04167vw;
           background: center/cover url(../images/svg/sprite.svg#check) no-repeat; }
+          @media only screen and (max-width: 1023px) {
+            .forms__capcha-label input:checked ~ b:before {
+              width: 6.25vw;
+              height: 6.25vw; } }
     .forms__capcha-text {
       display: block;
       padding-left: 0.625vw;
@@ -1484,6 +1537,11 @@ body {
       font-size: 0.72917vw;
       line-height: 0.83333vw;
       color: #000000; }
+      @media only screen and (max-width: 1023px) {
+        .forms__capcha-text {
+          padding-left: 3.75vw;
+          font-size: 4.375vw;
+          line-height: 5vw; } }
   .forms__submit-btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1503,6 +1561,9 @@ body {
        -moz-appearance: none;
             appearance: none;
     cursor: pointer; }
+    @media only screen and (max-width: 1023px) {
+      .forms__submit-btn {
+        margin: 7.5vw auto 0; } }
     .forms__submit-btn:disabled {
       pointer-events: none;
       opacity: 0.5; }
@@ -1513,10 +1574,18 @@ body {
       font-size: 1.30208vw;
       line-height: 150%;
       color: #ffffff; }
+      @media only screen and (max-width: 1023px) {
+        .forms__submit-btn span {
+          font-size: 5.625vw;
+          margin-right: 5vw; } }
     .forms__submit-btn svg {
       display: block;
       width: 2.86458vw;
       height: 1.14583vw; }
+      @media only screen and (max-width: 1023px) {
+        .forms__submit-btn svg {
+          width: 7.1875vw;
+          height: 5vw; } }
   .forms__desc {
     position: absolute;
     bottom: 3.54167vw;
@@ -1525,3 +1594,28 @@ body {
     font-size: 0.9375vw;
     line-height: 180%;
     color: #ffffff; }
+    @media only screen and (max-width: 1023px) {
+      .forms__desc {
+        left: 50% !important;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 14.0625vw;
+        bottom: 0;
+        width: 100%;
+        border-top: 0.3125vw solid rgba(255, 255, 255, 0.17);
+        font-weight: 400;
+        font-size: 3.75vw;
+        line-height: 180%; }
+        .forms__desc span {
+          display: none; } }

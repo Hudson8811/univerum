@@ -1,6 +1,10 @@
 body {
   @include font-source-sans(1.3vw, #ffffff, 400, false);
 
+  &.hidden {
+    overflow: hidden !important;
+  }
+
   @include mq('tablet-wide') {
     font-size: vwm(12);
   }

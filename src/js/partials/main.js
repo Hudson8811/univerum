@@ -281,16 +281,16 @@ $('#fullpage').fullpage({
     normalScrollElements: '',
     //normalScrollElements: '.contacts',
     autoScrolling: false,
-    keyboardScrolling: true,
+    // keyboardScrolling: true,
     // responsiveWidth: 1260,
     
-    parallax: true,
-    parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
-		parallaxOptions: {
-			type: 'reveal',
-			percentage: 62,
-			property: 'translate'
-		},
+    // parallax: false,
+    // parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+	// 	parallaxOptions: {
+	// 		type: 'cover',
+	// 		percentage: 62,
+	// 		property: 'translate'
+	// 	},
     afterResponsive: function(isResponsive){
         //console.log(isResponsive);
     },
