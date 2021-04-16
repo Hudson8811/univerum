@@ -3,6 +3,12 @@
   background: #090833;
   overflow: hidden;
 
+  .container {
+    @media screen and (max-height: 412px) {
+      z-index: 2;
+    }
+  }
+
   &:before {
     @include pseudo;
     width: vw(735);

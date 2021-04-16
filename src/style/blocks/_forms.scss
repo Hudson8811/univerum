@@ -5,6 +5,12 @@
     height: 100%;
   }
 
+  .container {
+    @media screen and (max-height: 412px) {
+      transform: scale(0.8);
+    }
+  }
+
   .title {
     margin-bottom: vw(72);
     font-size: vw(45);

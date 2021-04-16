@@ -65,6 +65,10 @@ body {
     width: calc(100vw - 30px);
     display: block;
   }
+
+  @media screen and (max-height: 412px) {
+    transform: scale(0.5);
+  }
 }
 
 .nowrap {

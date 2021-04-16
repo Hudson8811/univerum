@@ -151,6 +151,15 @@ $(document).ready(function(){
     }
 
 
+    $('.stages__slider-wrapper').on('mousewheel', function(event) {
+        if($('.stages__slider').position().top < -20){
+            $('.stages__slider-wrapper-hide').addClass('active')
+        } else{
+            $('.stages__slider-wrapper-hide').removeClass('active')
+        }
+    })
+
+
     fixPos()
     // animations($(window).scrollTop())
 

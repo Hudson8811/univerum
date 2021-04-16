@@ -6,14 +6,15 @@
   height: vw(43);
   text-decoration: none;
 
-  // @media screen and(max-height:767px) and (orientation: landscape) {
-  //   opacity: 0;
-  // }
-
   @include mq('tablet') {
     width: vwm(128);
     height: vwm(26);
     top: vwm(32);
+  }
+
+  @media screen and (max-height: 412px) {
+    top: vwm(10);
+    transform: scale(0.5);
   }
 
   svg {
@@ -121,6 +122,11 @@
       }
     }
   }
+
+  @media screen and (max-height: 412px) {
+    bottom: vwm(5);
+    transform: scale(0.5);
+  }
 }
 
 @keyframes mouseArrowAnim {
@@ -165,7 +171,7 @@
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 99;
   background: #191d26;
@@ -190,6 +196,10 @@
   @include mq('tablet') {
     width: vwm(46);
     padding: 0 0 vwm(41);
+  }
+
+  @media screen and (max-height: 412px) {
+    display: none;
   }
 
   &__pic {
