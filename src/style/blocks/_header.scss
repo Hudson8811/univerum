@@ -17,22 +17,44 @@
     display: block;
     width: 100%;
     height: 100%;
-    --logo-text: #fff;
-    --logo-icon: #0000ff;
+
+    path {
+      transition: 0.2s linear;
+      fill: #0000ff;
+
+      &:first-child {
+        fill: #fff;
+      }
+    }
 
     &.index0 {
-      --logo-text: #fff;
-      --logo-icon: #0000ff;
+      path {
+        fill: #0000ff;
+
+        &:first-child {
+          fill: #fff;
+        }
+      }
     }
 
     &.index1 {
-      --logo-text: #13161f;
-      --logo-icon: #0000ff;
+      path {
+        fill: #0000ff;
+
+        &:first-child {
+          fill: #13161f;
+        }
+      }
     }
 
     &.index2 {
-      --logo-text: #fff;
-      --logo-icon: #fff;
+      path {
+        fill: #fff;
+
+        &:first-child {
+          fill: #fff;
+        }
+      }
     }
   }
 }
@@ -140,15 +162,20 @@
   z-index: 99;
   background: #191d26;
   width: vw(70);
-  height: 100vh;
+  height: calc(100vh - 53px);
+  // height: calc(var(--vh, 1vh) * 100 - 53px);
+  height: calc(var(--vh, 1vh) * 100);
   padding: 0 0 vw(65);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 
-  @include mq('tablet-wide') {
+  @media screen and (max-width: 1800px) {
     right: 0 !important;
+  }
+
+  @include mq('tablet-wide') {
     width: vwm(46);
     padding: 0 0 vwm(41);
   }

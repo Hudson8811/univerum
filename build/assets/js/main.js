@@ -185,6 +185,12 @@ $(window).resize(function(){
 })
 
 $(document).ready(function(){
+
+    if($('body').hasClass('fp-viewing-0')){
+        $('body').addClass('animate-0')
+    }
+
+
     fixPos()
     // animations($(window).scrollTop())
 
@@ -193,51 +199,51 @@ $(document).ready(function(){
     //     animations(scroll)
     // })
 
-    $('.stages__slider').slick({
-        infinite: false,
-        arrows: true,
-        dots: false,
-        speed:300,
-        vertical: true,
-        verticalSwiping: true,
-        slidesToShow: 8,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 5,
-                slidesToScroll: 3,
-              }
-            },
-        ]
-    });
-    var	wheel = 0;
-	var	newDate = new Date();
-	var	oldDate = new Date();
-	$('.stages').on('mousewheel', function(event) {
-		newDate = new Date();
-		var scrollAllowed = true;
+    // $('.stages__slider').slick({
+    //     infinite: false,
+    //     arrows: true,
+    //     dots: false,
+    //     speed:300,
+    //     vertical: true,
+    //     verticalSwiping: true,
+    //     slidesToShow: 8,
+    //     responsive: [
+    //         {
+    //           breakpoint: 1024,
+    //           settings: {
+    //             slidesToShow: 5,
+    //             slidesToScroll: 3,
+    //           }
+    //         },
+    //     ]
+    // });
+    // var	wheel = 0;
+	// var	newDate = new Date();
+	// var	oldDate = new Date();
+	// $('.stages').on('mousewheel', function(event) {
+	// 	newDate = new Date();
+	// 	var scrollAllowed = true;
 
-		if( wheel < 10 && (newDate.getTime()-oldDate.getTime()) < 100 ) {
-			wheel++;
-		}
-		else {
-			if( (newDate.getTime()-oldDate.getTime()) > 100 ) {
-				wheel = 0;
-			}
-			else {
-				scrollAllowed = false;
-			}
-		}
-		oldDate = new Date();
-		if( scrollAllowed ) {
-			if (event.deltaY > 0) {
-				$('.stages .slick-prev').trigger('click');
-			} else {
-				$('.stages .slick-next').trigger('click');
-			}
-		}
-	});
+	// 	if( wheel < 10 && (newDate.getTime()-oldDate.getTime()) < 100 ) {
+	// 		wheel++;
+	// 	}
+	// 	else {
+	// 		if( (newDate.getTime()-oldDate.getTime()) > 100 ) {
+	// 			wheel = 0;
+	// 		}
+	// 		else {
+	// 			scrollAllowed = false;
+	// 		}
+	// 	}
+	// 	oldDate = new Date();
+	// 	if( scrollAllowed ) {
+	// 		if (event.deltaY > 0) {
+	// 			$('.stages .slick-prev').trigger('click');
+	// 		} else {
+	// 			$('.stages .slick-next').trigger('click');
+	// 		}
+	// 	}
+	// });
 
     
 
@@ -305,10 +311,10 @@ $(document).ready(function(){
             }
     });
 })
-function fullpage_toggle(toggle, direction) {
-    $.fn.fullpage.setAllowScrolling(toggle, direction);
-    $.fn.fullpage.setKeyboardScrolling(toggle, direction);
-}
+// function fullpage_toggle(toggle, direction) {
+//     $.fn.fullpage.setAllowScrolling(toggle, direction);
+//     $.fn.fullpage.setKeyboardScrolling(toggle, direction);
+// }
 
 $('#fullpage').fullpage({
     licenseKey: '930B3D8E-64114A48-BE58EB40-E2698A87',
@@ -336,38 +342,43 @@ $('#fullpage').fullpage({
     },
     onLeave: function( origin, destination, direction){
 
-        if(destination.index == 0 || destination.index == 1 || destination.index == 2 || destination.index == 4 || destination.index == 5){
-            fullpage_toggle(true);
-        }
+        // if(destination.index == 0 || destination.index == 1 || destination.index == 2 || destination.index == 4 || destination.index == 5){
+        //     fullpage_toggle(true);
+        // }
 
-        if(destination.index == 3){
-            fullpage_toggle(false);
-        }
+        // if(destination.index == 3){
+        //     fullpage_toggle(false);
+        // }
 
         if(destination.index == 0){
             $('#logo-btn svg').removeClass().addClass('index0')
             $('#to-top-btn').removeClass('dark')
+            $('body').addClass('animate-0')
         }
 
         if(destination.index == 1){
             $('#to-top-btn').addClass('dark')
             $('#logo-btn svg').removeClass().addClass('index1')
+            $('body').addClass('animate-1')
         }
 
         if(destination.index == 2){
             $('#to-top-btn').removeClass('dark')
             $('#logo-btn svg').removeClass().addClass('index2')
+            $('body').addClass('animate-2')
         }
 
         if(destination.index == 3){
             $('#to-top-btn').removeClass('dark')
             $('#logo-btn svg').removeClass().addClass('index2')
             $('header').removeClass('hide')
+            $('body').addClass('animate-3')
         }
 
         if(destination.index == 4){
             $('#to-top-btn').removeClass('dark')
             $('#logo-btn svg').removeClass().addClass('index2')
+            $('body').addClass('animate-4')
 
             if($(window).width() < 1024){
                 $('header').addClass('hide')
@@ -378,58 +389,63 @@ $('#fullpage').fullpage({
             $('#logo-btn svg').removeClass().addClass('index1')
             $('#to-top-btn').addClass('dark')
             $('header').removeClass('hide')
+            $('body').addClass('animate-5')
         }
         if(destination.index == 6){
             $('#logo-btn svg').removeClass().addClass('index2')
             $('#to-top-btn').removeClass('dark')
             $('header').removeClass('hide')
+            $('body').addClass('animate-6')
         }
 
         if(destination.index == 7){
             $('#logo-btn svg').removeClass().addClass('index2')
             $('#to-top-btn').removeClass('dark')
             $('header').addClass('hide')
+            $('body').addClass('animate-7')
         }
 
         if(destination.index == 8){
             $('#logo-btn svg').removeClass().addClass('index1')
             $('#to-top-btn').addClass('dark').removeClass('hide')
             $('header').removeClass('hide')
+            $('body').addClass('animate-8')
         }
 
         if(destination.index == 9){
             $('#logo-btn svg').removeClass().addClass('index2')
             $('#to-top-btn').addClass('dark').addClass('hide')
             $('header').addClass('hide')
+            $('body').addClass('animate-9')
         }
     }
 });
 
 
 
-$('.stages__slider').on('afterChange', function(event, slick, currentSlide) {
-    console.log(currentSlide)
+// $('.stages__slider').on('afterChange', function(event, slick, currentSlide) {
+//     console.log(currentSlide)
 
-    if($(window).width() <1024){
-        if(currentSlide == 0){
-            fullpage_toggle(true,'up');
-        }
+//     if($(window).width() <1024){
+//         if(currentSlide == 0){
+//             fullpage_toggle(true,'up');
+//         }
     
-        if(currentSlide == 6){
-            fullpage_toggle(true,'down');
-        }
+//         if(currentSlide == 6){
+//             fullpage_toggle(true,'down');
+//         }
 
-    } else{
-        if(currentSlide == 0){
-            fullpage_toggle(true,'up');
-        }
+//     } else{
+//         if(currentSlide == 0){
+//             fullpage_toggle(true,'up');
+//         }
     
-        if(currentSlide == 2){
-            fullpage_toggle(true,'down');
-        }
-    }
+//         if(currentSlide == 2){
+//             fullpage_toggle(true,'down');
+//         }
+//     }
     
-});
+// });
 
 $("#form1").submit(function(){
     $.ajax({ 
@@ -441,4 +457,16 @@ $("#form1").submit(function(){
     });
     $('#form1').trigger("reset");
     return false;
+});
+
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+// We listen to the resize event
+window.addEventListener('resize', () => {
+// We execute the same script as before
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 });

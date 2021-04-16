@@ -29,10 +29,12 @@
                         textarea.forms__textarea(name="text", required, autocomplete="off") 
                     .forms__submit
                         .forms__capcha
-                            label.forms__capcha-label
-                                input(type="checkbox", name="capcha")
-                                b
-                            .forms__capcha-text I’m not a robot
+                            div(class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX")
+                            div(class="text-danger" id="recaptchaError")
+                            //- label.forms__capcha-label
+                            //-     input(type="checkbox", name="capcha")
+                            //-     b
+                            //- .forms__capcha-text I’m not a robot
 
                         button.forms__submit-btn(type="submit", disabled)
                             span Отправить

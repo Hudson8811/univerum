@@ -8,6 +8,7 @@ html(lang="ru")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="robots" content="noindex, nofollow")
 		meta(name="description" content="")
 		meta(name="keywords" content="")
 		meta(property="og:image" content="images/logo.svg")
@@ -30,4 +31,5 @@ html(lang="ru")
 				include ../blocks/_popups
 
 			block scripts
+				script(src='https://www.google.com/recaptcha/api.js')
 				script(src="assets/js/main.js")
