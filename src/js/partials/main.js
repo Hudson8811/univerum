@@ -126,7 +126,7 @@ function fixPos(){
     $('.forms__desc').css({left: `${leftCoordination}`})
     $('.header').css({right: `calc(${leftCoordination} - ${headerWidth})`})
 
-    if($(window).width() < 1024){
+    if($(window).width() < 768){
         if(!$('.confident__slider').hasClass('slick-initialized')){
             $('.confident__slider').slick(settings)
         }
@@ -340,7 +340,7 @@ $('#fullpage').fullpage({
             $('#logo-btn svg').removeClass().addClass('index2')
             $('body').addClass('animate-4')
 
-            if($(window).width() < 1024){
+            if($(window).width() < 768){
                 $('header').addClass('hide')
             }
         }

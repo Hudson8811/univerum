@@ -1,8 +1,8 @@
 .clients {
   background-color: #13161f;
 
-  @include mq('tablet-wide') {
-    background: #23285f;
+  @include mq('tablet') {
+    background: #23285f center / cover url(../images/chip.png) no-repeat !important;
   }
   &__content {
     max-width: vw(648);
@@ -13,7 +13,7 @@
       transform: translateX(100vw);
     }
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       max-width: none;
       padding-right: vwm(31);
 
@@ -48,7 +48,7 @@
     & + & {
       margin-top: vw(48);
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         margin-top: vwm(10);
       }
     }

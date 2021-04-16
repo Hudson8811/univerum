@@ -5,7 +5,7 @@
     padding-bottom: vw(91);
     color: #13161f;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       padding-bottom: 0;
       width: auto;
       font-size: vwm(20);
@@ -20,7 +20,7 @@
     padding-right: vw(42);
     margin-left: auto;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       padding-right: vwm(31);
       width: 100%;
     }
@@ -34,7 +34,7 @@
     color: #13161f;
     transform: translateX(100vw);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(12);
       line-height: 135%;
     }
@@ -76,12 +76,12 @@
     & + & {
       margin-top: vw(40);
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         margin-top: vwm(10);
       }
     }
 
-    @include mq('tablet-wide', min) {
+    @include mq('tablet', min) {
       &:hover {
         color: #0000ff;
 

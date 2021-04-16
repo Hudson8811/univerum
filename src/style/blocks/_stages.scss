@@ -10,7 +10,7 @@
     font-size: vw(45);
     line-height: 150%;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(20);
       margin-bottom: vwm(16);
     }
@@ -22,7 +22,7 @@
       overflow: auto;
       margin-right: -17px;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         height: vwm(274);
       }
 
@@ -32,7 +32,7 @@
         height: vw(688);
         margin-left: auto;
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           height: vwm(274);
         }
 
@@ -40,11 +40,11 @@
         &:after {
           @include pseudo;
           width: 100%;
-          height: 183px;
+          height: vw(183);
           left: 0;
           z-index: 2;
 
-          @include mq('tablet-wide') {
+          @include mq('tablet') {
             height: vwm(63);
           }
         }
@@ -63,7 +63,7 @@
     position: relative;
     width: vw(670);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       width: 100%;
       padding-right: vwm(31);
     }
@@ -76,7 +76,7 @@
     height: vw(60);
     opacity: 0;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       height: vwm(34);
     }
 
@@ -127,7 +127,7 @@
       margin-right: vw(24);
       flex-shrink: 0;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         width: vwm(24);
         height: vwm(24);
         margin-right: vwm(12);
@@ -140,7 +140,7 @@
       line-height: 135%;
       color: #ffffff;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         font-size: vwm(14);
       }
     }
@@ -148,7 +148,7 @@
     &-wrapper {
       padding: vw(14) 0;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         padding: vwm(10);
       }
     }

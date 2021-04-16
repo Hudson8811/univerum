@@ -6,7 +6,11 @@
   height: vw(43);
   text-decoration: none;
 
-  @include mq('tablet-wide') {
+  @media screen and(max-height:767px) and (orientation: landscape) {
+    opacity: 0;
+  }
+
+  @include mq('tablet') {
     width: vwm(128);
     height: vwm(26);
     top: vwm(32);
@@ -66,6 +70,10 @@
   display: block;
   transition: 0.2s linear;
 
+  @media screen and(max-height:767px) and (orientation: landscape) {
+    opacity: 0;
+  }
+
   svg {
     display: block;
     --fill: #ffffff;
@@ -98,7 +106,7 @@
     opacity: 0;
   }
 
-  @include mq('tablet-wide') {
+  @include mq('tablet') {
     bottom: vwm(41);
     svg {
       &:nth-child(1),
@@ -144,7 +152,7 @@
     height: vw(24);
   }
 
-  @include mq('tablet-wide') {
+  @include mq('tablet') {
     width: vwm(32);
     height: vwm(32);
     margin: 0 auto;
@@ -175,7 +183,11 @@
     right: 0 !important;
   }
 
-  @include mq('tablet-wide') {
+  @media screen and(max-height:767px) and (orientation: landscape) {
+    opacity: 0;
+  }
+
+  @include mq('tablet') {
     width: vwm(46);
     padding: 0 0 vwm(41);
   }
@@ -276,7 +288,7 @@
       }
     }
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       margin: vwm(15) auto;
     }
   }
@@ -293,13 +305,13 @@
       height: 100%;
     }
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       width: vwm(20);
       height: vwm(20);
     }
   }
 
-  @include mq('tablet-wide') {
+  @include mq('tablet') {
     transition: opacity 0.2s linear;
     &.hide {
       opacity: 0;

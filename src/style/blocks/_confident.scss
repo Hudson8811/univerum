@@ -11,7 +11,7 @@
     bottom: vw(91);
     background: center / cover url('../images/confident-before.png') no-repeat;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       display: none;
     }
   }
@@ -25,7 +25,7 @@
     transform: translateY(-50%);
     background: center / cover url('../images/confident-after.png') no-repeat;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       width: vwm(616);
       height: vwm(452);
       right: vwm(-171);
@@ -36,7 +36,7 @@
     font-size: vw(45);
     margin-bottom: vw(58);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(20);
       margin-bottom: vwm(30);
     }
@@ -45,7 +45,7 @@
   &__content {
     max-width: vw(962);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       position: relative;
       max-width: none;
       z-index: 2;
@@ -53,7 +53,7 @@
   }
 
   &__slider {
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       width: 100vw;
       margin-left: -15px;
     }
@@ -71,7 +71,7 @@
       & + & {
         margin-top: vw(20);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           margin-top: 0;
         }
       }
@@ -101,7 +101,7 @@
       transition: 0.4s transform 0.2s;
     }
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       position: relative;
       display: flex;
       justify-content: flex-start;

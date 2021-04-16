@@ -5,7 +5,7 @@ body {
     overflow: hidden !important;
   }
 
-  @include mq('tablet-wide') {
+  @include mq('tablet') {
     font-size: vwm(12);
   }
 }
@@ -26,6 +26,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and(max-height:800px) and (orientation: landscape) {
+    min-height: 100%;
+    height: auto;
+    padding: vwm(20);
+  }
 }
 
 .section {
@@ -34,6 +40,14 @@ body {
   top: 0;
   width: 100%;
   overflow: hidden;
+
+  @media screen and(max-height:800px) and (orientation: landscape) {
+    position: relative;
+    top: auto;
+  }
+
+  @include mq('tablet') {
+  }
 }
 
 .container {
@@ -44,7 +58,7 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  @include mq('tablet-wide') {
+  @include mq('tablet') {
     max-width: none;
     width: calc(100vw - 30px);
     display: block;

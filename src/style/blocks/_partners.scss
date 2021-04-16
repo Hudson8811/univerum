@@ -7,7 +7,7 @@
     white-space: nowrap;
     color: #13161f;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(20);
       margin-bottom: vwm(40);
     }
@@ -17,7 +17,7 @@
     width: 100%;
     padding-right: vw(10);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       padding-right: 0;
     }
   }
@@ -30,7 +30,7 @@
     margin-bottom: vw(-90);
     margin-left: vw(-75);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       margin-left: 0;
       margin-bottom: vwm(-30);
     }
@@ -43,7 +43,7 @@
     align-items: center;
     margin-bottom: vw(90);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       margin-bottom: vwm(30);
       width: 50%;
     }
@@ -55,7 +55,7 @@
         width: vw(178);
         height: vw(56);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(83);
           height: vwm(26);
         }
@@ -69,7 +69,7 @@
         width: vw(118);
         height: vw(53);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(40);
           height: vwm(18);
         }
@@ -83,7 +83,7 @@
         width: vw(68);
         height: vw(94);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(27);
           height: vwm(37);
         }
@@ -97,7 +97,7 @@
         width: vw(181);
         height: vw(56);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(71);
           height: vwm(23);
         }
@@ -111,7 +111,7 @@
         width: vw(192);
         height: vw(28);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(85);
           height: vwm(13);
         }
@@ -125,7 +125,7 @@
         width: vw(186);
         height: vw(20);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(72);
           height: vwm(7);
         }
@@ -139,7 +139,7 @@
         width: vw(42);
         height: vw(88);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(20);
           height: vwm(42);
         }
@@ -153,7 +153,7 @@
         width: vw(216);
         height: vw(58);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(74);
           height: vwm(20);
         }
@@ -167,7 +167,7 @@
         width: vw(137);
         height: vw(64);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(60);
           height: vwm(29);
         }
@@ -181,7 +181,7 @@
         width: vw(169);
         height: vw(61);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           width: vwm(60);
           height: vwm(22);
         }

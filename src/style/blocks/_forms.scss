@@ -1,7 +1,7 @@
 .forms {
   background: #3e00d0;
 
-  @include mq('tablet-wide') {
+  @include mq('tablet') {
     padding: vwm(98) 0 vwm(102);
     height: 100%;
   }
@@ -13,7 +13,7 @@
     color: #ffffff;
     white-space: nowrap;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(20);
       margin-bottom: vwm(40);
     }
@@ -23,7 +23,7 @@
     width: 100%;
     padding-right: vw(10);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       padding-right: 0;
     }
   }
@@ -39,7 +39,7 @@
     width: calc(50% - 7.6vw / 2);
     margin-bottom: vw(-56);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       width: 100%;
     }
   }
@@ -51,7 +51,7 @@
     border-bottom: vw(2) solid #fff;
     margin-bottom: vw(56);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       border-bottom: vwm(1) solid #fff;
       margin-bottom: vwm(32);
     }
@@ -63,7 +63,7 @@
         font-weight: 450;
         font-size: vw(16);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           top: vwm(-10);
           font-size: vwm(10);
         }
@@ -89,7 +89,7 @@
     line-height: 135%;
     color: #ffffff;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       height: vwm(28);
       font-size: vwm(14);
     }
@@ -100,7 +100,7 @@
     height: vw(196);
     padding: vw(18) vw(24);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       height: vwm(136);
       padding: vwm(12) vwm(16);
     }
@@ -110,7 +110,7 @@
       border: vw(2) solid #fff;
       margin-bottom: 0;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         margin-top: vwm(28);
         border: vwm(2) solid #fff;
 
@@ -125,7 +125,7 @@
         top: vw(18);
         left: vw(24);
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           top: vwm(12);
           left: vwm(16);
         }
@@ -142,7 +142,7 @@
     color: rgba(255, 255, 255, 0.35);
     transition: all 0.2s linear;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(14);
     }
   }
@@ -153,7 +153,7 @@
       opacity: 0;
     }
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       background: 103% center / vwm(48) vwm(48) url(../images/svg/sprite.svg#downloads) no-repeat;
     }
   }
@@ -167,7 +167,7 @@
     line-height: 135%;
     color: #ffffff;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       height: vwm(28);
       font-size: vwm(14);
     }
@@ -185,7 +185,7 @@
     text-align: right;
     color: rgba(255, 255, 255, 0.35);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       top: calc(100% + 2.5vw);
       font-size: vwm(10);
     }
@@ -197,7 +197,7 @@
     align-items: center;
     margin-top: vw(46);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       margin-top: vwm(24);
       display: block;
     }
@@ -226,13 +226,13 @@
         transform: scale(0.75);
         transform-origin: left top;
 
-        @include mq('tablet-wide') {
+        @include mq('tablet') {
           transform: scale(1);
         }
       }
     }
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       width: vwm(304);
       max-width: 100%;
       height: vwm(76);
@@ -246,7 +246,7 @@
     //   height: vw(57);
     //   background: center / cover url(../images/recapcha.png) no-repeat;
 
-    //   @include mq('tablet-wide') {
+    //   @include mq('tablet') {
     //     right: vwm(13);
     //     top: vwm(11);
     //     width: vwm(56);
@@ -264,7 +264,7 @@
       height: vw(28);
       cursor: pointer;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         width: vwm(28);
         height: vwm(28);
       }
@@ -281,7 +281,7 @@
           box-sizing: border-box;
           border-radius: vw(2);
 
-          @include mq('tablet-wide') {
+          @include mq('tablet') {
             width: vwm(28);
             height: vwm(28);
             border: vwm(2) solid #c1c1c1;
@@ -297,7 +297,7 @@
             height: vw(20);
             background: center / cover url(../images/svg/sprite.svg#check) no-repeat;
 
-            @include mq('tablet-wide') {
+            @include mq('tablet') {
               width: vwm(20);
               height: vwm(20);
             }
@@ -314,7 +314,7 @@
       line-height: vw(16);
       color: #000000;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         padding-left: vwm(12);
         font-size: vwm(14);
         line-height: vwm(16);
@@ -334,7 +334,7 @@
     appearance: none;
     cursor: pointer;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       margin: vwm(24) auto 0;
     }
 
@@ -351,7 +351,7 @@
       line-height: 150%;
       color: #ffffff;
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         font-size: vwm(18);
         margin-right: vwm(16);
       }
@@ -362,7 +362,7 @@
       width: vw(55);
       height: vw(22);
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         width: vwm(23);
         height: vwm(16);
       }
@@ -378,7 +378,7 @@
     line-height: 180%;
     color: #ffffff;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       left: 50% !important;
       @include сentering-x;
       display: flex;

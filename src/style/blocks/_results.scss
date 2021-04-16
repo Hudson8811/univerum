@@ -10,7 +10,7 @@
     height: vw(1000);
     background: center / cover url(../images/results-before.png) no-repeat;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       width: vwm(285);
       height: vwm(234);
       background: center / cover url(../images/mobile-results.png) no-repeat;
@@ -23,7 +23,7 @@
     color: #13161f;
     white-space: nowrap;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(20);
       margin-bottom: vwm(24);
     }
@@ -33,7 +33,7 @@
     position: relative;
     z-index: 2;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       padding-right: vwm(31);
     }
   }
@@ -48,7 +48,7 @@
     transform: translateX(-100vw);
     transition: 0s transform 0.2s;
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       display: none;
     }
   }
@@ -61,14 +61,14 @@
     color: #13161f;
     transform: translateX(-100vw);
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
       font-size: vwm(12);
     }
 
     & + & {
       margin-top: vw(20);
 
-      @include mq('tablet-wide') {
+      @include mq('tablet') {
         margin-top: vwm(10);
       }
     }
