@@ -85,6 +85,9 @@ body {
     body {
       font-size: 3.75vw; } }
 
+* {
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif; }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -594,7 +597,7 @@ body {
   .services__item {
     position: relative;
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.97917vw;
     color: #13161f;
     -webkit-transform: translateX(100vw);
@@ -687,6 +690,7 @@ body {
           width: auto;
           margin-bottom: 7.5vw; } }
   .clients__item {
+    font-weight: 500;
     color: #fff;
     -webkit-transform: translateX(100vw);
             transform: translateX(100vw); }
@@ -1021,7 +1025,7 @@ body {
         display: none; } }
   .results__item {
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.30208vw;
     line-height: 150%;
     color: #13161f;
@@ -1105,7 +1109,7 @@ body {
       margin-right: -17px; } }
   .havystages__item {
     display: block;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.14583vw;
     line-height: 180%;
     color: #ffffff;
@@ -1177,7 +1181,7 @@ body {
   .allstages__title {
     display: block;
     padding-right: 1.04167vw;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2.34375vw;
     line-height: 150%;
     color: #ffffff; }

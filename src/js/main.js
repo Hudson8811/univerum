@@ -5,6 +5,7 @@
 // libs/fullpage.parallax.limited.min.js
 //= libs/scrolloverflow.min.js
 //= libs/jquery.mousewheel.min.js
+// libs/hammer.min.js
 //= libs/slick.min.js
 
 /* my scripts */
