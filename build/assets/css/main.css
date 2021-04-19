@@ -963,7 +963,7 @@ body {
         min-height: 62.5vw;
         padding: 5vw 12.5vw 5vw 5vw;
         font-size: 4.375vw;
-        font-weight: 600; }
+        font-weight: 500; }
         .confident__item svg {
           position: absolute;
           z-index: 2;
