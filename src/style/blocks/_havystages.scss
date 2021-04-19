@@ -1,4 +1,5 @@
 .havystages {
+  position: relative;
   background-color: #081529;
   @include mq('tablet') {
     background-position: 65% 50%;
@@ -15,12 +16,46 @@
   }
 
   &__content {
-    max-width: vw(648);
-    margin-left: auto;
+    &-wrapper-hide {
+      max-width: vw(648);
+      margin-left: auto;
+      overflow: hidden;
+
+      @include mq('tablet') {
+        max-width: none;
+
+        &:before {
+          @include pseudo;
+          z-index: 2;
+          left: 0;
+          bottom: 0;
+          height: vwm(192);
+          width: 100%;
+          background: linear-gradient(180deg, #0c1221 75.26%, rgba(11, 18, 32, 0) 107.29%);
+          transform: rotate(-180deg);
+          transition: 0.2s linear;
+        }
+
+        &.active {
+          &:before {
+            opacity: 0;
+          }
+        }
+      }
+    }
 
     @include mq('tablet') {
       max-width: none;
       padding-right: vwm(31);
+      height: vwm(210);
+    }
+
+    &-wrapper {
+      @include mq('tablet') {
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-right: -17px;
+      }
     }
   }
 
@@ -42,10 +77,6 @@
 
     &:nth-child(2) {
       transition: 0.1s transform 0.2s;
-
-      @include mq('tablet') {
-        display: none;
-      }
     }
 
     & + & {

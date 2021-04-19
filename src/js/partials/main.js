@@ -149,13 +149,25 @@ $(document).ready(function(){
     if($('body').hasClass('fp-viewing-0')){
         $('body').addClass('animate-0')
     }
+    const pos1 = $('.stages__slider').position().top
+    const pos2 = $('.havystages__content').position().top
 
 
     $('.stages__slider-wrapper').on('mousewheel', function(event) {
-        if($('.stages__slider').position().top < 0){
+        console.log($('.stages__slider').position().top)
+        if($('.stages__slider').position().top < pos1){
             $('.stages__slider-wrapper-hide').addClass('active')
         } else{
             $('.stages__slider-wrapper-hide').removeClass('active')
+        }
+    })
+
+    $('.havystages__content-wrapper').on('mousewheel', function(event) {
+        console.log($('.havystages__content').position().top)
+        if($('.havystages__content').position().top < pos2){
+            $('.havystages__content-wrapper-hide').addClass('active')
+        } else{
+            $('.havystages__content-wrapper-hide').removeClass('active')
         }
     })
 
@@ -321,12 +333,12 @@ $('#fullpage').fullpage({
 
         if(destination.index == 0){
             $('#logo-btn svg').removeClass().addClass('index0')
-            $('#to-top-btn').removeClass('dark')
+            $('#to-top-btn').removeClass('dark').addClass('active')
             $('body').addClass('animate-0')
         }
 
         if(destination.index == 1){
-            $('#to-top-btn').addClass('dark')
+            $('#to-top-btn').addClass('dark').removeClass('active')
             $('#logo-btn svg').removeClass().addClass('index1')
             $('body').addClass('animate-1')
         }
@@ -379,6 +391,7 @@ $('#fullpage').fullpage({
             $('#to-top-btn').addClass('dark').removeClass('hide')
             $('header').removeClass('hide')
             $('body').addClass('animate-8')
+            $('#logo-btn').removeClass('active')
         }
 
         if(destination.index == 9){
@@ -386,6 +399,7 @@ $('#fullpage').fullpage({
             $('#to-top-btn').addClass('dark').addClass('hide')
             $('header').addClass('hide')
             $('body').addClass('animate-9')
+            $('#logo-btn').addClass('active')
         }
     }
 });

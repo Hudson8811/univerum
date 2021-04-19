@@ -16,6 +16,7 @@
     @include mq('tablet') {
       max-width: none;
       padding-right: vwm(31);
+      padding-bottom: vwm(60);
 
       .title {
         font-size: vwm(20);

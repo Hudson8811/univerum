@@ -8,8 +8,9 @@
     color: #13161f;
 
     @include mq('tablet') {
+      padding-top: vwm(20);
       font-size: vwm(20);
-      margin-bottom: vwm(40);
+      margin-bottom: vwm(20);
     }
   }
 

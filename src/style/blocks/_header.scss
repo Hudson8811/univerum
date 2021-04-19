@@ -10,6 +10,10 @@
     width: vwm(128);
     height: vwm(26);
     top: vwm(32);
+
+    &.active {
+      display: none;
+    }
   }
 
   @media screen and (max-height: 412px) {
@@ -116,7 +120,6 @@
       }
 
       &:nth-child(3) {
-        display: block;
         width: vwm(28);
         height: vwm(48);
       }
@@ -126,6 +129,16 @@
   @media screen and (max-height: 412px) {
     bottom: vwm(5);
     transform: scale(0.5);
+  }
+}
+
+.fp-viewing-0 {
+  .to-top-btn {
+    svg:nth-child(3) {
+      @include mq('tablet') {
+        display: block;
+      }
+    }
   }
 }
 
@@ -209,6 +222,13 @@
     width: vw(451);
     display: none;
 
+    @include mq('tablet') {
+      top: vwm(-23);
+      right: vwm(46);
+      width: vwm(274);
+      padding: vwm(16) vwm(16) vwm(20) vwm(16);
+    }
+
     &:hover {
       display: block;
     }
@@ -219,12 +239,22 @@
       width: 2.08vw;
       left: 100%;
       top: 0;
+
+      @include mq('tablet') {
+        display: none;
+      }
     }
 
     &:before {
       top: vw(31);
       left: calc(100% - 0.41vw);
-      @include css-triangle(#0000ff, right, 28px);
+      @include css-triangle(#0000ff, right, 1.45vw);
+
+      @include mq('tablet') {
+        left: calc(100% - 1.25vw);
+        top: vwm(22);
+        @include css-triangle(#0000ff, right, 3.75vw);
+      }
     }
 
     &-title {
@@ -235,6 +265,11 @@
       text-transform: uppercase;
       color: #ffffff;
       margin-bottom: vw(27);
+
+      @include mq('tablet') {
+        font-size: vwm(14);
+        margin-bottom: vwm(16);
+      }
     }
 
     &-list {
@@ -250,6 +285,11 @@
       color: #ffffff;
       padding-left: vw(21);
 
+      @include mq('tablet') {
+        font-size: vwm(12);
+        padding-left: vwm(12);
+      }
+
       &:before {
         @include pseudo;
         left: 0;
@@ -258,10 +298,19 @@
         height: vw(8);
         border-radius: 50%;
         background-color: #fff;
+
+        @include mq('tablet') {
+          width: vwm(4);
+          height: vwm(4);
+        }
       }
 
       & + & {
         margin-top: vw(15);
+
+        @include mq('tablet') {
+          margin-top: vwm(12);
+        }
       }
     }
   }
