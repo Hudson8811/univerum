@@ -445,7 +445,7 @@
               <div class="container"> 
                 <div class="forms__wrapper"> 
                   <p class="title">обсудим ваш проект?</p>
-                  <form class="forms__content" onsubmit="send(event, 'form1.php')" enctype="multipart/form-data" method="post" id="form1" name="call-form">
+                  <form class="forms__content" onsubmit="send(event, 'assets/php/form1.php')" enctype="multipart/form-data" method="post" id="form1" name="call-form">
                     <div class="forms__row">
                       <label class="forms__label"><span class="forms__placeholder">Ваше имя</span>
                         <input class="forms__input" type="text" name="name" required autocomplete="off">
@@ -465,6 +465,10 @@
                         <textarea class="forms__textarea" name="text" required autocomplete="off"> </textarea>
                       </label>
                       <div class="forms__submit">
+                        <div class="forms__capcha">
+                          <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+                          <div class="text-danger" id="recaptchaError"></div>
+                        </div>
                         <button class="forms__submit-btn" type="submit"><span>Отправить</span>
                           <svg>
                             <use xlink:href="./assets/images/svg/sprite.svg#sumbit-arrow"></use>

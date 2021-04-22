@@ -16,7 +16,7 @@ $title = "Заголовок письма";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $mail<br><br>
+<b>Почта:</b> $email<br><br>
 <b>Телефон:</b> $phone<br><br>
 <b>Задача:</b><br>$text
 ";
@@ -27,7 +27,7 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
@@ -70,4 +70,3 @@ else {$result = "error";}
 
 // Отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
-view rawsend.php hosted with ❤ by GitHub

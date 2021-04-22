@@ -3,7 +3,7 @@
         .forms__wrapper 
             +title('обсудим ваш проект?')
 
-            form.forms__content( onsubmit="send(event, 'form1.php')" enctype="multipart/form-data" method="post" id="form1" name="call-form")
+            form.forms__content( onsubmit="send(event, 'assets/php/form1.php')" enctype="multipart/form-data" method="post" id="form1" name="call-form")
                 .forms__row
                     label.forms__label
                         span.forms__placeholder Ваше имя
@@ -28,9 +28,9 @@
                         span.forms__placeholder Описание задачи
                         textarea.forms__textarea(name="text", required, autocomplete="off") 
                     .forms__submit
-                        //- .forms__capcha
-                        //-     div(class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX")
-                        //-     div(class="text-danger" id="recaptchaError")
+                        .forms__capcha
+                            div(class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX")
+                            div(class="text-danger" id="recaptchaError")
 
                         button.forms__submit-btn(type="submit")
                             span Отправить
