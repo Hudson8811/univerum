@@ -445,7 +445,7 @@
               <div class="container"> 
                 <div class="forms__wrapper"> 
                   <p class="title">обсудим ваш проект?</p>
-                  <form class="forms__content" action="assets/php/form1.php" method="post" id="form1" name="call-form">
+                  <form class="forms__content" onsubmit="send(event, 'form1.php')" enctype="multipart/form-data" method="post" id="form1" name="call-form">
                     <div class="forms__row">
                       <label class="forms__label"><span class="forms__placeholder">Ваше имя</span>
                         <input class="forms__input" type="text" name="name" required autocomplete="off">
@@ -457,7 +457,7 @@
                         <input class="forms__input" type="text" name="phone" required autocomplete="off">
                       </label>
                       <label class="forms__label forms__label-file"><span class="forms__placeholder">Прикрепить файл</span>
-                        <input class="forms__input" type="file" name="file" required autocomplete="off"><span class="forms__file-name"></span><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
+                        <input class="forms__input" type="file" name="file[]" id="file" autocomplete="off"><span class="forms__file-name"></span><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
                       </label>
                     </div>
                     <div class="forms__row">
@@ -465,18 +465,13 @@
                         <textarea class="forms__textarea" name="text" required autocomplete="off"> </textarea>
                       </label>
                       <div class="forms__submit">
-                        <div class="forms__capcha">
-                          <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
-                          <div class="text-danger" id="recaptchaError"></div>
-                        </div>
-                        <button class="forms__submit-btn" type="submit" disabled><span>Отправить</span>
+                        <button class="forms__submit-btn" type="submit"><span>Отправить</span>
                           <svg>
                             <use xlink:href="./assets/images/svg/sprite.svg#sumbit-arrow"></use>
                           </svg>
                         </button>
                       </div>
                     </div>
-                    <input class="call-control" autocomplete="off" type="hidden" name="call-control" value="0">
                   </form>
                 </div>
               </div>

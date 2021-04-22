@@ -240,20 +240,20 @@ $(document).ready(function(){
         fullpage_api.moveTo(4)
     })
 
-    if($('input[type="checkbox"]').prop('checked')){
-        $('.forms__submit-btn').attr('disabled', false);
-    }else{
-        $('.forms__submit-btn').attr('disabled', true);
-    }
+    // if($('input[type="checkbox"]').prop('checked')){
+    //     $('.forms__submit-btn').attr('disabled', false);
+    // }else{
+    //     $('.forms__submit-btn').attr('disabled', true);
+    // }
 
-    $(document).on('change', 'input[type="checkbox"]', function(){
-        console.log('up')
-        if($('input[type="checkbox"]').prop('checked')){
-        $('.forms__submit-btn').attr('disabled', false);
-        }else{
-        $('.forms__submit-btn').attr('disabled', true);
-        }
-    });
+    // $(document).on('change', 'input[type="checkbox"]', function(){
+    //     console.log('up')
+    //     if($('input[type="checkbox"]').prop('checked')){
+    //     $('.forms__submit-btn').attr('disabled', false);
+    //     }else{
+    //     $('.forms__submit-btn').attr('disabled', true);
+    //     }
+    // });
 
 
     $('.forms__input[type="text"], .forms__textarea, .forms__input[type="email"]').focus(function(){
@@ -432,16 +432,43 @@ $('#fullpage').fullpage({
     
 // });
 
-$("#form1").submit(function(){
-    $.ajax({ 
-        type: "POST", 
-        url: "assets/php/form1.php",
-        data: $("#form1").serialize(),
-        success: function(html) { 
-        }
-    });
-    $('#form1').trigger("reset");
-    return false;
-});
+// $("#form1").submit(function(){
+//     $.ajax({ 
+//         type: "POST", 
+//         url: "assets/php/form1.php",
+//         data: $("#form1").serialize(),
+//         success: function(html) { 
+//             console.log('up')
+//         }
+//     });
+//     $('#form1').trigger("reset");
+//     return false;
+// });
 
 
+// Отправка данных на сервер
+function send(event, php){
+    console.log("Отправка запроса");
+    event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    var req = new XMLHttpRequest();
+    req.open('POST', php, true);
+    req.onload = function() {
+        if (req.status >= 200 && req.status < 400) {
+        json = JSON.parse(this.response); // Ебанный internet explorer 11
+            console.log(json);
+            
+            // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+            if (json.result == "success") {
+                // Если сообщение отправлено
+                alert("Сообщение отправлено");
+            } else {
+                // Если произошла ошибка
+                alert("Ошибка. Сообщение не отправлено");
+            }
+        // Если не удалось связаться с php файлом
+        } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+    
+    // Если не удалось отправить запрос. Стоит блок на хостинге
+    req.onerror = function() {alert("Ошибка отправки запроса");};
+    req.send(new FormData(event.target));
+    }
