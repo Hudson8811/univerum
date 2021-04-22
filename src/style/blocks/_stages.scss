@@ -18,7 +18,7 @@
 
   &__slider {
     &-wrapper {
-      height: vw(688);
+      // height: vw(688);
       overflow-y: auto;
       overflow-x: hidden;
       margin-right: -17px;
@@ -30,7 +30,7 @@
       &-hide {
         position: relative;
         overflow: hidden;
-        height: vw(688);
+        // height: vw(688);
         margin-left: auto;
 
         @include mq('tablet') {
@@ -62,14 +62,18 @@
         }
 
         &:before {
-          top: 0;
-          background: linear-gradient(180deg, #0000ff 0%, rgba(0, 0, 255, 0) 100%);
-          opacity: 0;
+          @include mq('tablet') {
+            top: 0;
+            background: linear-gradient(180deg, #0000ff 0%, rgba(0, 0, 255, 0) 100%);
+            opacity: 0;
+          }
         }
 
         &:after {
-          bottom: 0;
-          background: linear-gradient(180deg, rgba(0, 0, 255, 0) 0%, #0000ff 100%);
+          @include mq('tablet') {
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 255, 0) 0%, #0000ff 100%);
+          }
         }
       }
     }
@@ -86,7 +90,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: vw(60);
     opacity: 0;
 
     @include mq('tablet') {
@@ -159,10 +162,15 @@
     }
 
     &-wrapper {
-      padding: vw(14) 0;
+      margin-bottom: vw(48);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       @include mq('tablet') {
         padding: vwm(10);
+        margin-bottom: 0;
       }
     }
   }

@@ -126,7 +126,7 @@ body {
   }
 }
 
-.animate-3 {
+.animate-4 {
   .stages {
     .title {
       transform: translateX(0);
@@ -138,7 +138,7 @@ body {
   }
 }
 
-.animate-4 {
+.animate-5 {
   .confident {
     .title {
       transform: translateX(0);
@@ -150,7 +150,7 @@ body {
   }
 }
 
-.animate-5 {
+.animate-6 {
   .results {
     .title {
       transform: translateX(0);
@@ -163,7 +163,7 @@ body {
   }
 }
 
-.animate-6 {
+.animate-7 {
   .havystages {
     .title {
       transform: translateX(0);
@@ -175,13 +175,13 @@ body {
   }
 }
 
-.animate-7 {
+.animate-8 {
   .allstages__item {
     transform: translateX(0);
   }
 }
 
-.animate-8 {
+.animate-9 {
   .partners {
     .title {
       transform: translateX(0);
@@ -189,9 +189,21 @@ body {
   }
 }
 
-.animate-9 {
+.animate-10 {
   .forms {
     .title {
+      transform: translateX(0);
+    }
+  }
+}
+
+.animate-3 {
+  .industries {
+    .title {
+      transform: translateX(0);
+    }
+
+    &-item {
       transform: translateX(0);
     }
   }

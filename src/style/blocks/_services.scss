@@ -29,7 +29,7 @@
   &__item {
     position: relative;
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     line-height: vw(38);
     color: #13161f;
     transform: translateX(100vw);
@@ -82,14 +82,14 @@
     }
 
     @include mq('tablet', min) {
-      &:hover {
-        color: #0000ff;
+      // &:hover {
+      //   color: #0000ff;
 
-        &:before {
-          opacity: 1;
-          transform: translateX(0%);
-        }
-      }
+      //   &:before {
+      //     opacity: 1;
+      //     transform: translateX(0%);
+      //   }
+      // }
     }
   }
 }

@@ -216,59 +216,38 @@
   &__pic {
     position: absolute;
     background: #0000ff;
-    top: vw(-43);
     right: calc(100% + 2.08vw);
-    padding: vw(40);
-    width: vw(451);
+    width: vw(340);
     display: none;
+    height: vw(70);
+    justify-content: flex-start;
+    align-items: center;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    padding-left: vw(32);
+    @include сentering-y;
+    cursor: pointer;
 
     @include mq('tablet') {
-      top: vwm(-23);
       right: vwm(46);
+      height: vwm(40);
       width: vwm(274);
-      padding: vwm(16) vwm(16) vwm(20) vwm(16);
+      padding-left: vwm(32);
     }
 
     &:hover {
-      display: block;
-    }
-
-    &:after {
-      @include pseudo;
-      height: 100%;
-      width: 2.08vw;
-      left: 100%;
-      top: 0;
-
-      @include mq('tablet') {
-        display: none;
-      }
-    }
-
-    &:before {
-      top: vw(31);
-      left: calc(100% - 0.41vw);
-      @include css-triangle(#0000ff, right, 1.45vw);
-
-      @include mq('tablet') {
-        left: calc(100% - 1.25vw);
-        top: vwm(22);
-        @include css-triangle(#0000ff, right, 3.75vw);
-      }
+      display: flex;
     }
 
     &-title {
       display: block;
       font-weight: 500;
-      font-size: vw(30);
+      font-size: vw(22);
       line-height: 150%;
       text-transform: uppercase;
       color: #ffffff;
-      margin-bottom: vw(27);
 
       @include mq('tablet') {
         font-size: vwm(14);
-        margin-bottom: vwm(16);
       }
     }
 
@@ -340,13 +319,27 @@
     flex-shrink: 0;
 
     &:hover {
+      &:before {
+        @include pseudo;
+        height: vw(70);
+        width: vw(74);
+        right: 100%;
+        top: 0;
+      }
+
       .header__pic {
-        display: block;
+        display: flex;
       }
     }
 
     @include mq('tablet') {
       margin: vwm(15) auto;
+
+      &:hover {
+        &:before {
+          display: none;
+        }
+      }
     }
   }
 

@@ -73,14 +73,14 @@
     flex-shrink: 0;
     width: vw(56);
     height: vw(56);
-    border: vw(1) solid #ffffff;
+    border: vw(2) solid #ffffff;
     border-radius: 50%;
 
     span {
       position: absolute;
       display: block;
       width: vw(30);
-      height: vw(1);
+      height: vw(2);
       background-color: #fff;
       transition: transform 0.2s linear;
 
@@ -92,11 +92,11 @@
     @include mq('tablet') {
       width: vwm(23);
       height: vwm(23);
-      border: vwm(1) solid #ffffff;
+      border: vwm(2) solid #ffffff;
 
       span {
         width: vwm(11);
-        height: vwm(1);
+        height: vwm(2);
       }
     }
   }
