@@ -21,6 +21,8 @@ $body = "
 <b>Задача:</b><br>$text
 ";
 
+
+
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
