@@ -206,7 +206,7 @@
 
   @include mq('tablet') {
     width: vwm(46);
-    padding: 0 0 vwm(41);
+    padding: vwm(32) 0 vwm(32);
   }
 
   @media screen and (max-height: 412px) {
@@ -216,8 +216,8 @@
   &__pic {
     position: absolute;
     background: #0000ff;
-    right: calc(100% + 2.08vw);
-    width: vw(340);
+    right: calc(100% + 1vw);
+    width: vw(387);
     display: none;
     height: vw(70);
     justify-content: flex-start;
@@ -301,6 +301,10 @@
       display: block;
       width: 100%;
     }
+
+    @include mq('tablet') {
+      display: none;
+    }
   }
 
   &__menu {
@@ -310,6 +314,10 @@
     align-items: flex-start;
     width: 100%;
     margin: auto 0;
+
+    @include mq('tablet') {
+      margin-top: 0;
+    }
   }
 
   &__item {
@@ -333,12 +341,17 @@
     }
 
     @include mq('tablet') {
-      margin: vwm(15) auto;
+      margin: vwm(13) auto;
 
       &:hover {
         &:before {
-          display: none;
+          width: vwm(274);
+          height: vwm(40);
         }
+      }
+
+      &:first-child {
+        margin-top: 0;
       }
     }
   }

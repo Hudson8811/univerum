@@ -235,10 +235,12 @@ $(document).ready(function(){
         fullpage_api.moveSectionDown()
     })
 
-    $('.header__pic').click(function(e){
-        e.preventDefault()
-        fullpage_api.moveTo(4)
-    })
+  $('.header__item').click(function(e){
+      e.preventDefault()
+      const id = $(this).data('id')
+      fullpage_api.moveTo(id)
+      console.log(id)
+  })
 
     // if($('input[type="checkbox"]').prop('checked')){
     //     $('.forms__submit-btn').attr('disabled', false);
