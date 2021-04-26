@@ -17,6 +17,7 @@
     line-height: 150%;
     color: #ffffff;
     white-space: nowrap;
+    transform: translate(0);
 
     @include mq('tablet') {
       font-size: vwm(20);

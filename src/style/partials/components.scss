@@ -4,7 +4,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   width: min-content;
-  transition: 0.2s transform 0.5s;
+  transition: transform 0.1s;
   transform: translateX(-100vw);
 
   @include mq('tablet') {

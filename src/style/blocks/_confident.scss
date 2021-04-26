@@ -59,6 +59,8 @@
   }
 
   &__slider {
+    transform: translateX(-100vw);
+    transition: transform 0.2s linear;
     @include mq('tablet') {
       width: 100vw;
       margin-left: -15px;
@@ -71,7 +73,6 @@
     font-size: vw(22);
     line-height: 150%;
     color: #ffffff;
-    transform: translateX(-100vw);
 
     &-wrapper {
       & + & {

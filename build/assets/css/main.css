@@ -190,7 +190,7 @@ body {
   -webkit-transform: translateX(0);
           transform: translateX(0); }
 
-.animate-5 .confident__item {
+.animate-5 .confident__slider {
   -webkit-transform: translateX(0);
           transform: translateX(0); }
 
@@ -219,6 +219,10 @@ body {
   -webkit-transform: translateX(0);
           transform: translateX(0); }
 
+.animate-9 .partners__wrapper {
+  -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
 .animate-10 .forms .title {
   -webkit-transform: translateX(0);
           transform: translateX(0); }
@@ -243,10 +247,10 @@ body {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  -webkit-transition: 0.2s -webkit-transform 0.5s;
-  transition: 0.2s -webkit-transform 0.5s;
-  transition: 0.2s transform 0.5s;
-  transition: 0.2s transform 0.5s, 0.2s -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
   -webkit-transform: translateX(-100vw);
           transform: translateX(-100vw); }
   @media only screen and (max-width: 767px) {
@@ -902,18 +906,23 @@ body {
         position: relative;
         max-width: none;
         z-index: 2; } }
-  @media only screen and (max-width: 767px) {
-    .confident__slider {
-      width: 100vw;
-      margin-left: -15px; } }
+  .confident__slider {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear; }
+    @media only screen and (max-width: 767px) {
+      .confident__slider {
+        width: 100vw;
+        margin-left: -15px; } }
   .confident__item {
     display: block;
     font-weight: 400;
     font-size: 1.14583vw;
     line-height: 150%;
-    color: #ffffff;
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw); }
+    color: #ffffff; }
     .confident__item-wrapper + .confident__item-wrapper {
       margin-top: 1.04167vw; }
       @media only screen and (max-width: 767px) {
@@ -1284,7 +1293,13 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: -4.6875vw;
-    margin-left: -3.90625vw; }
+    margin-left: -3.90625vw;
+    -webkit-transform: translate(100vw);
+            transform: translate(100vw);
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear; }
     @media only screen and (max-width: 767px) {
       .partners__wrapper {
         margin-left: 0;
@@ -1440,7 +1455,9 @@ body {
     font-size: 2.34375vw;
     line-height: 150%;
     color: #ffffff;
-    white-space: nowrap; }
+    white-space: nowrap;
+    -webkit-transform: translate(0);
+            transform: translate(0); }
     @media only screen and (max-width: 767px) {
       .forms .title {
         font-size: 6.25vw;

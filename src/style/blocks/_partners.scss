@@ -30,6 +30,8 @@
     flex-wrap: wrap;
     margin-bottom: vw(-90);
     margin-left: vw(-75);
+    transform: translate(100vw);
+    transition: transform 0.2s linear;
 
     @include mq('tablet') {
       margin-left: 0;

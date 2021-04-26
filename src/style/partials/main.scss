@@ -145,7 +145,7 @@ body {
     }
   }
 
-  .confident__item {
+  .confident__slider {
     transform: translateX(0);
   }
 }
@@ -184,6 +184,10 @@ body {
 .animate-9 {
   .partners {
     .title {
+      transform: translateX(0);
+    }
+
+    &__wrapper {
       transform: translateX(0);
     }
   }
