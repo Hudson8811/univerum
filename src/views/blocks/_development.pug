@@ -1,3 +1,6 @@
-.development.section-wrapper(style="background-image:url(assets/images/development-bg.png)")
+.development.section-wrapper
+    .development-video__wrapper
+        video(autoplay="autoplay" muted="muted" loop="loop" playsinline class="development-video")
+            source(src="assets/images/video.mp4" type="video/mp4")
     .container
         +title('Разработка электронных устройств')

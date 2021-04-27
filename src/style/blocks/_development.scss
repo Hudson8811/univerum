@@ -4,4 +4,22 @@
   @include mq('tablet') {
     background-position: 75% 50%;
   }
+
+  &-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &__wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+    }
+  }
 }
