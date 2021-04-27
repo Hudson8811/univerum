@@ -141,6 +141,8 @@ $(window).resize(function(){
 
 $(document).ready(function(){
 
+    $('.development-video').trigger('play');
+
     $('.industries-title').click(function(e){
         const $this = $(this)
 
@@ -372,6 +374,7 @@ $('#fullpage').fullpage({
             // $('#logo-btn svg').removeClass().addClass('index0')
             // $('#to-top-btn').removeClass('dark').addClass('active').removeClass('hide')
             $('body').addClass('animate-0')
+            $('.development-video').trigger('play');
         }
 
         if(destination.index == 1){
