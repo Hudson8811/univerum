@@ -292,16 +292,58 @@ $(document).ready(function(){
     $('.confident__item svg').click(function(){
         $('.confident__slider').slick('next')
     })
+    var filesWrapper = $('.forms__files')
 
     $(document).on('change','.forms__label-file input[type="file"]', function(){
-        var file = $(this)[0].files[0]
-            if (file){
-            $(this).parent('.forms__label-file').addClass('active');
-              $('.forms__file-name').text(file.name);
+        const $this = $(this) 
+        const files = $this[0].files
+        console.log(files)
+        if ($('.file-item').length > 2 || files.length > 3){
+            $this.parent('.forms__label').addClass('active')
+            $this.siblings('.forms__file-name').text('Выбрано больше 3-х файлов')
+            $('.forms__submit-btn').addClass('untach')
+        }
+
+            if (files){
+                for (let i = 0; i < files.length; i++) {
+                    filesWrapper.append(`
+                    <div class="file-item">
+                        <span class="file-name">${files[i].name}</span>
+                        <div class="file-remove">x</div>
+                    </div>
+                    `)
+
+                    if(files[i].size > 64000000){
+                        $this.parent('.forms__label').addClass('active')
+                        $('.forms__submit-btn').addClass('untach')
+                        $this.siblings('.forms__file-name').text('Файл слишком большой')
+                    }
+                }
             } else{
-                $(this).parent('.forms__label-file').addClass('error');
             }
     });
+
+    $(document).on('click', '.file-remove', function(e){
+        $(this).parent('.file-item').remove()
+        const $this = $(this) 
+        const fileInput = $('.forms__label-file input[type="file"]') 
+        const index = $this.index() - 1
+        const dt = new DataTransfer()
+        const files = fileInput[0].files
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i]
+            if (index !== i) dt.items.add(file)
+            fileInput.files = dt.files
+        }
+
+        if ($('.file-item').length < 4){
+            $('.forms__label-file').removeClass('active')
+            $('.forms__file-name').text('')
+            $('.forms__submit-btn').removeClass('untach')
+        }
+        console.log($('.file-item').length )
+        
+    })
 })
 // function fullpage_toggle(toggle, direction) {
 //     $.fn.fullpage.setAllowScrolling(toggle, direction);

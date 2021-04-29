@@ -1492,6 +1492,7 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .forms__row {
+    position: relative;
     width: calc(50% - 7.6vw / 2);
     margin-bottom: -2.91667vw; }
     @media only screen and (max-width: 767px) {
@@ -1590,7 +1591,7 @@ body {
     font-weight: 450;
     font-size: 1.14583vw;
     line-height: 135%;
-    color: #ffffff; }
+    color: red; }
     @media only screen and (max-width: 767px) {
       .forms__file-name {
         height: 8.75vw;
@@ -1812,10 +1813,44 @@ body {
         .forms__desc span {
           display: none; } }
 
-@media only screen and (max-width: 767px) {
-  .grecaptcha-badge {
-    opacity: 0;
-    visibility: hidden; } }
+.forms__submit .grecaptcha-badge {
+  position: relative !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  margin-bottom: 1.04167vw; }
+
+.grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden; }
+
+.forms__files {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 2;
+  height: 4.6875vw;
+  overflow: hidden; }
+  .forms__files .file-item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .forms__files .file-item + .file-item {
+      margin-top: 0.52083vw; }
+  .forms__files .file-name {
+    font-size: 0.625vw; }
+  .forms__files .file-remove {
+    font-size: 0.625vw;
+    cursor: pointer; }
+
+.untach {
+  pointer-events: none; }
 
 .industries {
   background-color: #fff; }

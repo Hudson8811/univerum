@@ -45,6 +45,7 @@
   }
 
   &__row {
+    position: relative;
     width: calc(50% - 7.6vw / 2);
     margin-bottom: vw(-56);
 
@@ -174,7 +175,7 @@
     font-weight: 450;
     font-size: vw(22);
     line-height: 135%;
-    color: #ffffff;
+    color: red;
 
     @include mq('tablet') {
       height: vwm(28);
@@ -408,10 +409,49 @@
     }
   }
 }
-
-.grecaptcha-badge {
-  @include mq('tablet') {
-    opacity: 0;
-    visibility: hidden;
+.forms__submit {
+  .grecaptcha-badge {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-bottom: vw(20);
   }
+}
+.grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.forms__files {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 2;
+  height: vw(90);
+  overflow: hidden;
+
+  .file {
+    &-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & + .file-item {
+        margin-top: vw(10);
+      }
+    }
+
+    &-name {
+      font-size: vw(12);
+    }
+
+    &-remove {
+      font-size: vw(12);
+      cursor: pointer;
+    }
+  }
+}
+.untach {
+  pointer-events: none;
 }

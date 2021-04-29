@@ -22,6 +22,8 @@
                         input.forms__input(type="file", name="file[]", id="file" multiple autocomplete="off")
                         span.forms__file-name
                         span.forms__disclamer-files Максимум 3 файла, до 8 мб. каждый
+
+                    .forms__files
                 
                 .forms__row
                     label.forms__label.forms__textarea-wrapper
@@ -32,7 +34,7 @@
                         //-     div(class="g-recaptcha" data-sitekey="6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS")
                         //-     div(class="text-danger" id="recaptchaError")
 
-                        button.forms__submit-btn(type="submit")
+                        button.forms__submit-btn(type="submit" class="g-recaptcha"  data-sitekey="6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS"  data-callback='onSubmit'  data-action='submit')
                             span Отправить
                             +svg('sumbit-arrow')
                 
