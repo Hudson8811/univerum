@@ -317,6 +317,7 @@
 
     @include mq('tablet') {
       margin-top: vwm(45);
+      margin-bottom: vwm(45);
     }
   }
 

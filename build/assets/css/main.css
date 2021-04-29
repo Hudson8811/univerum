@@ -523,7 +523,8 @@ body {
     margin: auto 0; }
     @media only screen and (max-width: 767px) {
       .header__menu {
-        margin-top: 14.0625vw; } }
+        margin-top: 14.0625vw;
+        margin-bottom: 14.0625vw; } }
   .header__item {
     position: relative;
     width: 100%;
@@ -1810,6 +1811,11 @@ body {
         line-height: 180%; }
         .forms__desc span {
           display: none; } }
+
+@media only screen and (max-width: 767px) {
+  .grecaptcha-badge {
+    opacity: 0;
+    visibility: hidden; } }
 
 .industries {
   background-color: #fff; }

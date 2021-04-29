@@ -409,14 +409,9 @@
   }
 }
 
-// .grecaptcha-badge {
-//   position: relative !important;
-//   visibility: visible !important;
-//   bottom: auto !important;
-//   right: auto !important;
-//   margin-bottom: vw(20);
-
-//   @include mq('tablet') {
-//     margin: 0 auto;
-//   }
-// }
+.grecaptcha-badge {
+  @include mq('tablet') {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
