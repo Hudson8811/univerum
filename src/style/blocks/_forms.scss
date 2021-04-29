@@ -415,6 +415,9 @@
     opacity: 1 !important;
     visibility: visible !important;
     margin-bottom: vw(20);
+    @include mq('tablet') {
+      margin: 0 auto;
+    }
   }
 }
 .grecaptcha-badge {
@@ -430,6 +433,10 @@
   height: vw(90);
   overflow: hidden;
 
+  @include mq('tablet') {
+    height: vwm(15);
+  }
+
   .file {
     &-item {
       width: 100%;
@@ -439,15 +446,28 @@
 
       & + .file-item {
         margin-top: vw(10);
+
+        @include mq('tablet') {
+          margin-top: vwm(10);
+        }
       }
     }
 
     &-name {
       font-size: vw(12);
+      @include truncate(80%);
+
+      @include mq('tablet') {
+        font-size: vwm(12);
+      }
     }
 
     &-remove {
       font-size: vw(12);
+
+      @include mq('tablet') {
+        font-size: vwm(12);
+      }
       cursor: pointer;
     }
   }
