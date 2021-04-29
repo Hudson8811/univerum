@@ -110,11 +110,12 @@ body {
     width: 0px;
     /* ширина для вертикального скролла */ }
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 750px) and (orientation: landscape) {
   .wrapper {
     position: relative;
     max-width: 320px;
-    margin: 0 auto; } }
+    margin: 0 auto;
+    overflow: hidden; } }
 
 .section-wrapper {
   display: -webkit-box;
@@ -131,7 +132,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
+  @media screen and (max-height: 450px) {
+    .section-wrapper {
+      min-height: 100vh;
+      height: auto;
+      padding: 20px 0; } }
+  @media screen and (max-width: 750px) and (orientation: landscape) {
     .section-wrapper {
       max-width: 320px;
       margin: 0 auto; } }
@@ -142,6 +148,10 @@ body {
   top: 0;
   width: 100%;
   overflow: hidden; }
+  @media screen and (max-height: 450px) {
+    .section {
+      position: relative;
+      top: auto; } }
 
 .container {
   width: calc(100% - 30px);
@@ -161,7 +171,7 @@ body {
       max-width: none;
       width: calc(100vw - 30px);
       display: block; } }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
+  @media screen and (max-width: 750px) and (orientation: landscape) {
     .container {
       max-width: calc(320px - 30px);
       margin: 0 auto; } }
@@ -274,6 +284,10 @@ body {
   width: 13.17708vw;
   height: 2.23958vw;
   text-decoration: none; }
+  @media screen and (max-height: 450px) {
+    .logo-btn {
+      position: absolute;
+      left: 15px !important; } }
   @media only screen and (max-width: 750px) {
     .logo-btn {
       width: 128px;
@@ -395,6 +409,14 @@ body {
       .message-btn svg {
         width: 16px;
         height: 16px; } }
+  @media screen and (max-height: 450px) {
+    .message-btn {
+      width: 5.4vh;
+      height: 5.4vh;
+      margin-bottom: auto; }
+      .message-btn svg {
+        width: 70%;
+        height: 70%; } }
 
 .header {
   position: absolute;
@@ -536,6 +558,9 @@ body {
       .header__menu {
         margin-top: 10px;
         margin-bottom: 10px; } }
+    @media screen and (max-height: 450px) {
+      .header__menu {
+        margin-top: auto; } }
   .header__item {
     position: relative;
     width: 100%;
@@ -562,6 +587,9 @@ body {
           height: 40px; }
         .header__item:first-child {
           margin-top: 0; } }
+    @media screen and (max-height: 450px) {
+      .header__item {
+        margin: 2.2vh auto; } }
   .header__link {
     display: block;
     width: 1.66667vw;
@@ -575,6 +603,10 @@ body {
       .header__link {
         width: 20px;
         height: 20px; } }
+    @media screen and (max-height: 450px) {
+      .header__link {
+        width: 4.4vh;
+        height: 4.4vh; } }
   @media only screen and (max-width: 750px) {
     .header {
       -webkit-transition: opacity 0.2s linear;

@@ -6,6 +6,11 @@
   height: vw(43);
   text-decoration: none;
 
+  @media screen and (max-height: 450px) {
+    position: absolute;
+    left: vwm(15) !important;
+  }
+
   @include mq('tablet') {
     width: vwm(128);
     height: vwm(26);
@@ -181,6 +186,17 @@
       height: vwm(16);
     }
   }
+
+  @media screen and (max-height: 450px) {
+    width: 5.4vh;
+    height: 5.4vh;
+    margin-bottom: auto;
+
+    svg {
+      width: 70%;
+      height: 70%;
+    }
+  }
 }
 
 .header {
@@ -328,6 +344,10 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
+
+    @media screen and (max-height: 450px) {
+      margin-top: auto;
+    }
   }
 
   &__item {
@@ -364,6 +384,10 @@
         margin-top: 0;
       }
     }
+
+    @media screen and (max-height: 450px) {
+      margin: 2.2vh auto;
+    }
   }
 
   &__link {
@@ -381,6 +405,11 @@
     @include mq('tablet') {
       width: vwm(20);
       height: vwm(20);
+    }
+
+    @media screen and (max-height: 450px) {
+      width: 4.4vh;
+      height: 4.4vh;
     }
   }
 

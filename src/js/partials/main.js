@@ -111,6 +111,10 @@ $(window).resize(function(){
     fixPos()
 })
 
+window.addEventListener("orientationchange", function() {
+    fixPos()
+}, false);
+
 $(document).ready(function(){
 
     $('.development-video').trigger('play');
