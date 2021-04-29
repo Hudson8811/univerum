@@ -155,5 +155,6 @@ $breakpoints: (
 }
 
 @function vwm($px) {
-  @return (($px/320) * 100) + vw;
+  // @return (($px/320) * 100) + vw;
+  @return $px + px;
 }

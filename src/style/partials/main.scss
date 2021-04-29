@@ -39,9 +39,9 @@ body {
   }
 }
 .wrapper {
-  @media screen and (max-device-width: 812px) and (orientation: landscape) {
+  @media screen and(max-width:767px) and (orientation: landscape) {
     position: relative;
-    max-width: 506px;
+    max-width: 320px;
     margin: 0 auto;
   }
 }
@@ -63,8 +63,8 @@ body {
   //   }
   // }
 
-  @media screen and (max-device-width: 812px) and (orientation: landscape) {
-    max-width: 506px;
+  @media screen and(max-width:767px) and (orientation: landscape) {
+    max-width: 320px;
     margin: 0 auto;
   }
 }
@@ -97,6 +97,11 @@ body {
     max-width: none;
     width: calc(100vw - 30px);
     display: block;
+  }
+
+  @media screen and(max-width:767px) and (orientation: landscape) {
+    max-width: calc(320px - 30px);
+    margin: 0 auto;
   }
 
   // @media screen and (max-height: 412px) {
