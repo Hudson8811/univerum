@@ -56,7 +56,7 @@ function animations(scroll){
     if($('.section[data-section-id="9"]').offset().top - 10  <= scroll){
         $('#logo-btn svg').removeClass().addClass('index1')
 
-        if($(window).width() < 768){
+        if($(window).width() < 751){
             $('#logo-btn').removeClass('active')
         } else{
             $('#logo-btn').removeClass('active')
@@ -66,7 +66,7 @@ function animations(scroll){
     if($('.section[data-section-id="10"]').offset().top - 10  <= scroll){
         $('#logo-btn svg').removeClass().addClass('index2')
 
-        if($(window).width() < 768){
+        if($(window).width() < 751){
             $('#logo-btn').addClass('active')
         } else{
             $('#logo-btn').removeClass('active')
@@ -93,7 +93,7 @@ function fixPos(){
     $('.forms__desc').css({left: `calc(${leftCoordination} + ${wrapperCoordination})`})
     $('.header').css({right: `calc(${leftCoordination} - ${headerWidth})`})
 
-    if($(window).width() < 768){
+    if($(window).width() < 751){
         if(!$('.confident__slider').hasClass('slick-initialized')){
             $('.confident__slider').slick(settings)
         }
