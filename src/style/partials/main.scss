@@ -38,6 +38,13 @@ body {
     width: 0px; /* ширина для вертикального скролла */
   }
 }
+.wrapper {
+  @media screen and (max-device-width: 812px) and (orientation: landscape) {
+    position: relative;
+    max-width: 506px;
+    margin: 0 auto;
+  }
+}
 .section-wrapper {
   display: flex;
   width: 100vw;
@@ -55,6 +62,11 @@ body {
   //     padding: vwm(20) 0;
   //   }
   // }
+
+  @media screen and (max-device-width: 812px) and (orientation: landscape) {
+    max-width: 506px;
+    margin: 0 auto;
+  }
 }
 
 .section {
@@ -87,9 +99,9 @@ body {
     display: block;
   }
 
-  @media screen and (max-height: 412px) {
-    transform: scale(0.5);
-  }
+  // @media screen and (max-height: 412px) {
+  //   transform: scale(0.5);
+  // }
 }
 
 .nowrap {

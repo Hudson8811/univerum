@@ -16,10 +16,10 @@
     }
   }
 
-  @media screen and (max-height: 412px) {
-    top: vwm(10);
-    transform: scale(0.5);
-  }
+  // @media screen and (max-height: 412px) {
+  //   top: vwm(10);
+  //   transform: scale(0.5);
+  // }
 
   svg {
     display: block;
@@ -126,10 +126,10 @@
     }
   }
 
-  @media screen and (max-height: 412px) {
-    bottom: vwm(5);
-    transform: scale(0.5);
-  }
+  // @media screen and (max-height: 412px) {
+  //   bottom: vwm(5);
+  //   transform: scale(0.5);
+  // }
 }
 
 .fp-viewing-0 {
@@ -206,12 +206,12 @@
 
   @include mq('tablet') {
     width: vwm(46);
-    padding: vwm(32) 0 vwm(32);
+    padding: vwm(32) 0 vwm(64);
   }
 
-  @media screen and (max-height: 412px) {
-    display: none;
-  }
+  // @media screen and (max-height: 412px) {
+  //   display: none;
+  // }
 
   &__pic {
     position: absolute;

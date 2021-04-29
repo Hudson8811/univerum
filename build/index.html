@@ -468,7 +468,7 @@
                         <input class="forms__input" type="text" name="phone" required autocomplete="off">
                       </label>
                       <label class="forms__label forms__label-file"><span class="forms__placeholder">Прикрепить файл</span>
-                        <input class="forms__input" type="file" name="file[]" id="file" autocomplete="off"><span class="forms__file-name"></span><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
+                        <input class="forms__input" type="file" name="file[]" id="file" multiple autocomplete="off"><span class="forms__file-name"></span><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
                       </label>
                     </div>
                     <div class="forms__row">
@@ -476,10 +476,6 @@
                         <textarea class="forms__textarea" name="text" required autocomplete="off"> </textarea>
                       </label>
                       <div class="forms__submit">
-                        <div class="forms__capcha">
-                          <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
-                          <div class="text-danger" id="recaptchaError"></div>
-                        </div>
                         <button class="forms__submit-btn" type="submit"><span>Отправить</span>
                           <svg>
                             <use xlink:href="./assets/images/svg/sprite.svg#sumbit-arrow"></use>
@@ -487,6 +483,7 @@
                         </button>
                       </div>
                     </div>
+                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                   </form>
                 </div>
               </div>
@@ -496,7 +493,7 @@
         </div>
       </main>
       <footer class="footer"></footer>
-      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js?render=6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS"> </script>
       <script src="assets/js/main.js"></script>
     </div>
   </body>

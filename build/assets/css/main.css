@@ -110,6 +110,12 @@ body {
     width: 0px;
     /* ширина для вертикального скролла */ }
 
+@media screen and (max-device-width: 812px) and (orientation: landscape) {
+  .wrapper {
+    position: relative;
+    max-width: 506px;
+    margin: 0 auto; } }
+
 .section-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +131,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  @media screen and (max-device-width: 812px) and (orientation: landscape) {
+    .section-wrapper {
+      max-width: 506px;
+      margin: 0 auto; } }
 
 .section {
   position: sticky;
@@ -151,10 +161,6 @@ body {
       max-width: none;
       width: calc(100vw - 30px);
       display: block; } }
-  @media screen and (max-height: 412px) {
-    .container {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5); } }
 
 .nowrap {
   white-space: nowrap; }
@@ -271,11 +277,6 @@ body {
       top: 10vw; }
       .logo-btn.active {
         display: none; } }
-  @media screen and (max-height: 412px) {
-    .logo-btn {
-      top: 3.125vw;
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5); } }
   .logo-btn svg {
     display: block;
     display: block;
@@ -334,11 +335,6 @@ body {
       .to-top-btn svg:nth-child(3) {
         width: 8.75vw;
         height: 15vw; } }
-  @media screen and (max-height: 412px) {
-    .to-top-btn {
-      bottom: 1.5625vw;
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5); } }
 
 @media only screen and (max-width: 767px) {
   .fp-viewing-0 .to-top-btn svg:nth-child(3) {
@@ -423,10 +419,7 @@ body {
   @media only screen and (max-width: 767px) {
     .header {
       width: 14.375vw;
-      padding: 10vw 0 10vw; } }
-  @media screen and (max-height: 412px) {
-    .header {
-      display: none; } }
+      padding: 10vw 0 20vw; } }
   .header__pic {
     position: absolute;
     background: #0000ff;
@@ -907,7 +900,8 @@ body {
       .confident:after {
         width: 192.5vw;
         height: 141.25vw;
-        right: -53.4375vw; } }
+        right: auto;
+        left: 12.5vw; } }
   .confident .title {
     font-size: 2.34375vw;
     margin-bottom: 3.02083vw; }
@@ -1462,10 +1456,6 @@ body {
   @media only screen and (max-width: 767px) {
     .forms {
       height: 100%; } }
-  @media screen and (max-height: 412px) {
-    .forms .container {
-      -webkit-transform: scale(0.8);
-              transform: scale(0.8); } }
   .forms .title {
     margin-bottom: 3.75vw;
     font-size: 2.34375vw;
@@ -1629,7 +1619,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 2.39583vw; }
+    margin-top: 2.39583vw;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     @media only screen and (max-width: 767px) {
       .forms__submit {
         margin-top: 7.5vw;
@@ -1758,7 +1750,8 @@ body {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-bottom: 1.04167vw; }
     @media only screen and (max-width: 767px) {
       .forms__submit-btn {
         margin: 7.5vw auto 0; } }

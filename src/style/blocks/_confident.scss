@@ -34,7 +34,8 @@
     @include mq('tablet') {
       width: vwm(616);
       height: vwm(452);
-      right: vwm(-171);
+      right: auto;
+      left: vwm(40);
     }
   }
 

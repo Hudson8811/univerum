@@ -96,10 +96,22 @@ function animations(scroll){
 
     if($('.section[data-section-id="9"]').offset().top - 10  <= scroll){
         $('#logo-btn svg').removeClass().addClass('index1')
+
+        if($(window).width() < 768){
+            $('#logo-btn').removeClass('active')
+        } else{
+            $('#logo-btn').removeClass('active')
+        }
     }
 
     if($('.section[data-section-id="10"]').offset().top - 10  <= scroll){
         $('#logo-btn svg').removeClass().addClass('index2')
+
+        if($(window).width() < 768){
+            $('#logo-btn').addClass('active')
+        } else{
+            $('#logo-btn').removeClass('active')
+        }
     }
 
 
@@ -114,11 +126,12 @@ const settings = {
     variableWidth: true
 }
 function fixPos(){
+    let wrapperCoordination = $('.wrapper').css('margin-left')
     let leftCoordination = $('.container').css('margin-left')
     let headerWidth = $('.header').css('width')
-    $('#logo-btn').css({left: `${leftCoordination}`})
-    $('#to-top-btn').css({left: `${leftCoordination}`})
-    $('.forms__desc').css({left: `${leftCoordination}`})
+    $('#logo-btn').css({left: `calc(${leftCoordination} + ${wrapperCoordination})`})
+    $('#to-top-btn').css({left: `calc(${leftCoordination} + ${wrapperCoordination})`})
+    $('.forms__desc').css({left: `calc(${leftCoordination} + ${wrapperCoordination})`})
     $('.header').css({right: `calc(${leftCoordination} - ${headerWidth})`})
 
     if($(window).width() < 768){
@@ -314,7 +327,7 @@ $(document).ready(function(){
     })
     $('.message-btn').click(function(e){
         e.preventDefault()
-        fullpage_api.moveTo(10)
+        fullpage_api.moveTo(11)
     })
     
     $('.confident__item svg').click(function(){
@@ -518,3 +531,12 @@ function send(event, php){
     req.onerror = function() {alert("Ошибка отправки запроса");};
     req.send(new FormData(event.target));
     }
+
+    
+
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });

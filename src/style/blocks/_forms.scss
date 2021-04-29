@@ -5,11 +5,11 @@
     height: 100%;
   }
 
-  .container {
-    @media screen and (max-height: 412px) {
-      transform: scale(0.8);
-    }
-  }
+  // .container {
+  //   @media screen and (max-height: 412px) {
+  //     transform: scale(0.8);
+  //   }
+  // }
 
   .title {
     margin-bottom: vw(72);
@@ -205,6 +205,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: vw(46);
+    flex-wrap: wrap;
 
     @include mq('tablet') {
       margin-top: vwm(24);
@@ -342,7 +343,7 @@
     outline: none;
     appearance: none;
     cursor: pointer;
-
+    margin-bottom: vw(20);
     @include mq('tablet') {
       margin: vwm(24) auto 0;
     }
@@ -407,3 +408,15 @@
     }
   }
 }
+
+// .grecaptcha-badge {
+//   position: relative !important;
+//   visibility: visible !important;
+//   bottom: auto !important;
+//   right: auto !important;
+//   margin-bottom: vw(20);
+
+//   @include mq('tablet') {
+//     margin: 0 auto;
+//   }
+// }

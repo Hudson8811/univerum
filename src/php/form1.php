@@ -34,14 +34,26 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'rudenscky2011'; // Логин на почте
-    $mail->Password   = 'mosvlxroddziqazj'; // Пароль на почте
+    $mail->Username   = 'u0724122_tech'; // Логин на почте
+    $mail->Password   = 'univerumTECH'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('rudenscky2011@yandex.ru', 'Дмитрий Руденский'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('vknyaz@univerum.ru', 'univerum'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('rudenscky2011@yandex.ru');
+    $mail->addAddress('vknyaz@univerum.ru');
+
+    
+    // // Настройки вашей почты
+    // $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    // $mail->Username   = 'rudenscky2011'; // Логин на почте
+    // $mail->Password   = ''; // Пароль на почте
+    // $mail->SMTPSecure = 'ssl';
+    // $mail->Port       = 465;
+    // $mail->setFrom('rudenscky2011@yandex.ru', 'univerum'); // Адрес самой почты и имя отправителя
+
+    // // Получатель письма
+    // $mail->addAddress('rudenscky2011@yandex.ru');
 
     // Прикрипление файлов к письму
 if (!empty($file['name'][0])) {
@@ -56,10 +68,28 @@ if (!empty($file['name'][0])) {
         }
     }   
 }
-// Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;    
+
+$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_secret = '6LecjL0aAAAAAMQkvVE2Uz4eqoUYnm37UcO67i-z';
+    $recaptcha_response = $_POST['recaptcha_response'];
+ 
+    // Отправляем POST запрос и декодируем результаты ответа
+    $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+    $recaptcha = json_decode($recaptcha);
+ 
+    // Принимаем меры в зависимости от полученного результата
+    if ($recaptcha->score >= 0.5) {
+      // Отправка сообщения
+      $mail->isHTML(true);
+      $mail->Subject = $title;
+      $mail->Body = $body; 
+      
+    } else {
+      $status = "Сообщение не было отправлено. Причина ошибки: не пройдена проверка!";
+    }
+
+
+   
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
