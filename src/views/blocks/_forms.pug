@@ -17,13 +17,28 @@
                         span.forms__placeholder Номер телефона
                         input.forms__input(type="text", name="phone", required, autocomplete="off")
 
-                    label.forms__label.forms__label-file
+                    .forms__label.forms__label-file
                         span.forms__placeholder Прикрепить файл
-                        input.forms__input(type="file", name="file[]", id="file" multiple autocomplete="off")
+
+                        input.forms__input(type="file", name="file1[]", id="file-1" autocomplete="off")
+
+                        input.forms__input(type="file", name="file2[]", id="file-2" autocomplete="off")
+
+                        input.forms__input(type="file", name="file3[]", id="file-3" autocomplete="off")
+
                         span.forms__file-name
                         span.forms__disclamer-files Максимум 3 файла, до 8 мб. каждый
 
-                    .forms__files
+                    .forms__files 
+                        .file-item#file-item-1
+                            span.file-name
+                            .file-remove x
+                        .file-item#file-item-2
+                            span.file-name
+                            .file-remove x
+                        .file-item#file-item-3
+                            span.file-name
+                            .file-remove x
                 
                 .forms__row
                     label.forms__label.forms__textarea-wrapper
@@ -33,8 +48,8 @@
                         //- .forms__capcha
                         //-     div(class="g-recaptcha" data-sitekey="6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS")
                         //-     div(class="text-danger" id="recaptchaError")
-
-                        button.forms__submit-btn(type="submit" class="g-recaptcha"  data-sitekey="6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS"  data-callback='onSubmit'  data-action='submit')
+                        button(type="submit" class="g-recaptcha" style="display:none!important"  data-sitekey="6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS")
+                        button.forms__submit-btn(type="submit")
                             span Отправить
                             +svg('sumbit-arrow')
                 

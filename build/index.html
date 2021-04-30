@@ -467,17 +467,30 @@
                       <label class="forms__label"><span class="forms__placeholder">Номер телефона</span>
                         <input class="forms__input" type="text" name="phone" required autocomplete="off">
                       </label>
-                      <label class="forms__label forms__label-file"><span class="forms__placeholder">Прикрепить файл</span>
-                        <input class="forms__input" type="file" name="file[]" id="file" multiple autocomplete="off"><span class="forms__file-name"></span><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
-                      </label>
-                      <div class="forms__files"></div>
+                      <div class="forms__label forms__label-file"><span class="forms__placeholder">Прикрепить файл</span>
+                        <input class="forms__input" type="file" name="file1[]" id="file-1" autocomplete="off">
+                        <input class="forms__input" type="file" name="file2[]" id="file-2" autocomplete="off">
+                        <input class="forms__input" type="file" name="file3[]" id="file-3" autocomplete="off"><span class="forms__file-name"></span><span class="forms__disclamer-files">Максимум 3 файла, до 8 мб. каждый</span>
+                      </div>
+                      <div class="forms__files"> 
+                        <div class="file-item" id="file-item-1"><span class="file-name"></span>
+                          <div class="file-remove">x</div>
+                        </div>
+                        <div class="file-item" id="file-item-2"><span class="file-name"></span>
+                          <div class="file-remove">x</div>
+                        </div>
+                        <div class="file-item" id="file-item-3"><span class="file-name"></span>
+                          <div class="file-remove">x</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="forms__row">
                       <label class="forms__label forms__textarea-wrapper"><span class="forms__placeholder">Описание задачи</span>
                         <textarea class="forms__textarea" name="text" required autocomplete="off"> </textarea>
                       </label>
                       <div class="forms__submit">
-                        <button class="forms__submit-btn g-recaptcha" type="submit" data-sitekey="6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS" data-callback="onSubmit" data-action="submit"><span>Отправить</span>
+                        <button class="g-recaptcha" type="submit" style="display:none!important" data-sitekey="6LecjL0aAAAAAN8Ffw7ZqwyZH6WtjxnaxBSIzwLS"></button>
+                        <button class="forms__submit-btn" type="submit"><span>Отправить</span>
                           <svg>
                             <use xlink:href="./assets/images/svg/sprite.svg#sumbit-arrow"></use>
                           </svg>

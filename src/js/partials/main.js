@@ -296,57 +296,67 @@ $(document).ready(function(){
     $('.confident__item svg').click(function(){
         $('.confident__slider').slick('next')
     })
-    var filesWrapper = $('.forms__files')
+  
 
-    $(document).on('change','.forms__label-file input[type="file"]', function(){
+    $(document).on('change','#file-1', function(){
         const $this = $(this) 
         const files = $this[0].files
-        console.log(files)
-        if ($('.file-item').length > 2 || files.length > 3){
-            $this.parent('.forms__label').addClass('active')
-            $this.siblings('.forms__file-name').text('Выбрано больше 3-х файлов')
-            $('.forms__submit-btn').addClass('untach')
-        }
-
-            if (files){
-                for (let i = 0; i < files.length; i++) {
-                    filesWrapper.append(`
-                    <div class="file-item">
-                        <span class="file-name">${files[i].name}</span>
-                        <div class="file-remove">x</div>
-                    </div>
-                    `)
-
-                    if(files[i].size > 64000000){
-                        $this.parent('.forms__label').addClass('active')
-                        $('.forms__submit-btn').addClass('untach')
-                        $this.siblings('.forms__file-name').text('Файл слишком большой')
-                    }
-                }
-            } else{
-            }
+        const fileItem = $('#file-item-1')
+        const fileItemName = $('#file-item-1 .file-name')
+        fileItemName.text(files[0].name)
+        console.log('click 1')
+        fileItem.addClass('active')
+        $this.addClass('hide')
     });
 
-    $(document).on('click', '.file-remove', function(e){
-        $(this).parent('.file-item').remove()
+    $(document).on('change','#file-2', function(){
         const $this = $(this) 
-        const fileInput = $('.forms__label-file input[type="file"]') 
-        const index = $this.index() - 1
-        const dt = new DataTransfer()
-        const files = fileInput[0].files
-        for (let i = 0; i < files.length; i++) {
-            const file = files[i]
-            if (index !== i) dt.items.add(file)
-            fileInput.files = dt.files
-        }
+        const files = $this[0].files
+        const fileItem = $('#file-item-2')
+        const fileItemName = $('#file-item-2 .file-name')
+        fileItemName.text(files[0].name)
+        console.log('click 2')
+        fileItem.addClass('active')
+        $this.addClass('hide')
+    });
 
-        if ($('.file-item').length < 4){
-            $('.forms__label-file').removeClass('active')
-            $('.forms__file-name').text('')
-            $('.forms__submit-btn').removeClass('untach')
-        }
-        console.log($('.file-item').length )
-        
+    $(document).on('change','#file-3', function(){
+        const $this = $(this) 
+        const files = $this[0].files
+        const fileItem = $('#file-item-3')
+        const fileItemName = $('#file-item-3 .file-name')
+        fileItemName.text(files[0].name)
+        console.log('click 3')
+        fileItem.addClass('active')
+        $this.addClass('hide')
+    });
+
+    $('#file-item-3 .file-remove').click(function(){
+        const label= $('.forms__label-file')
+        const file = $('#file-3')
+        file.remove()
+        label.append(`<input class="forms__input" type="file", name="file3[]", id="file-3" autocomplete="off">`)
+
+        $(this).parent('#file-item-3 ').removeClass('active')
+        $('#file-3').removeClass('hide')
+    })
+    $('#file-item-2 .file-remove').click(function(){
+        const label= $('.forms__label-file')
+        const file = $('#file-2')
+        file.remove()
+        label.append(`<input class="forms__input" type="file", name="file2[]", id="file-2" autocomplete="off">`)
+
+        $(this).parent('#file-item-2 ').removeClass('active')
+        $('#file-2').removeClass('hide')
+    })
+    $('#file-item-1 .file-remove').click(function(){
+        const label= $('.forms__label-file')
+        const file = $('#file-1')
+        file.remove()
+        label.append(`<input class="forms__input" type="file", name="file1[]", id="file-1" autocomplete="off">`)
+
+        $(this).parent('#file-item-1 ').removeClass('active')
+        $('#file-1').removeClass('hide')
     })
 })
 // function fullpage_toggle(toggle, direction) {
@@ -410,7 +420,6 @@ $('#fullpage').fullpage({
         if(destination.index == 3){
             // $('#to-top-btn').removeClass('dark')
             // $('#logo-btn svg').removeClass().addClass('index2')
-            $('header').removeClass('hide')
             $('body').addClass('animate-3')
         }
 
@@ -418,16 +427,11 @@ $('#fullpage').fullpage({
             // $('#to-top-btn').removeClass('dark')
             // $('#logo-btn svg').removeClass().addClass('index2')
             $('body').addClass('animate-4')
-
-            if($(window).width() < 768){
-                $('header').addClass('hide')
-            }
         }
 
         if(destination.index == 5){
             // $('#logo-btn svg').removeClass().addClass('index1')
             // $('#to-top-btn').addClass('dark')
-            $('header').removeClass('hide')
             $('body').addClass('animate-5')
         }
         if(destination.index == 6){

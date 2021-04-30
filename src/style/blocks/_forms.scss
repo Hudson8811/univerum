@@ -163,6 +163,30 @@
       opacity: 0;
     }
 
+    #file-1 {
+      position: relative;
+      z-index: 2;
+
+      &.hide {
+        z-index: -2;
+      }
+    }
+    #file-2 {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+
+      &.hide {
+        z-index: -1;
+      }
+    }
+
+    #file-3 {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+    }
+
     @include mq('tablet') {
       background: 103% center / vwm(48) vwm(48) url(../images/svg/sprite.svg#downloads) no-repeat;
     }
@@ -430,7 +454,7 @@
   top: 100%;
   width: 100%;
   z-index: 2;
-  height: vw(90);
+  height: vw(65);
   overflow: hidden;
 
   @include mq('tablet') {
@@ -439,8 +463,12 @@
 
   .file {
     &-item {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
       width: 100%;
-      display: flex;
       justify-content: space-between;
       align-items: center;
 

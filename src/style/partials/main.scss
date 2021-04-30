@@ -1,5 +1,6 @@
 body {
   @include font-source-sans(1.3vw, #ffffff, 400, false);
+  background-color: #13161f;
 
   &.hidden {
     overflow: hidden !important;

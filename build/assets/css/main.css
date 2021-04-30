@@ -78,7 +78,8 @@ body {
   font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
   font-size: 1.3vw;
   color: #ffffff;
-  font-weight: 400; }
+  font-weight: 400;
+  background-color: #13161f; }
   body.hidden {
     overflow: hidden !important; }
   @media only screen and (max-width: 750px) {
@@ -1624,6 +1625,21 @@ body {
     background: 103% center/2.5vw 2.5vw url(../images/svg/sprite.svg#downloads) no-repeat; }
     .forms__label-file input {
       opacity: 0; }
+    .forms__label-file #file-1 {
+      position: relative;
+      z-index: 2; }
+      .forms__label-file #file-1.hide {
+        z-index: -2; }
+    .forms__label-file #file-2 {
+      position: absolute;
+      top: 0;
+      z-index: 1; }
+      .forms__label-file #file-2.hide {
+        z-index: -1; }
+    .forms__label-file #file-3 {
+      position: absolute;
+      top: 0;
+      z-index: 0; }
     @media only screen and (max-width: 750px) {
       .forms__label-file {
         background: 103% center/48px 48px url(../images/svg/sprite.svg#downloads) no-repeat; } }
@@ -1874,22 +1890,24 @@ body {
   top: 100%;
   width: 100%;
   z-index: 2;
-  height: 4.6875vw;
+  height: 3.38542vw;
   overflow: hidden; }
   @media only screen and (max-width: 750px) {
     .forms__files {
       height: 15px; } }
   .forms__files .file-item {
+    display: none;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .forms__files .file-item.active {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
     .forms__files .file-item + .file-item {
       margin-top: 0.52083vw; }
       @media only screen and (max-width: 750px) {
