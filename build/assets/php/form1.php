@@ -30,7 +30,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $mail->From = "mailer@univerum.com";
     $mail->FromName = "mail.univerum.com";
-    $mail->addAddress("mailer@univerum.com", "mail.univerum.com");
+    $mail->addAddress("mailer@univerum.com");
     // $mail->isSMTP();   
     // $mail->CharSet = "UTF-8";
     // $mail->SMTPAuth   = true;
