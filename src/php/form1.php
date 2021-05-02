@@ -1,8 +1,9 @@
 ﻿<?php
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
+// require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
+// require_once "autoload.php";
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
@@ -27,22 +28,25 @@ $body = "
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
-    $mail->isSMTP();   
-    $mail->CharSet = "UTF-8";
-    $mail->SMTPAuth   = true;
-    $mail->SMTPDebug = 2;
-    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+    $mail->From = "mailer@univerum.com";
+    $mail->FromName = "mail.univerum.com";
+    $mail->addAddress("mailer@univerum.com", "mail.univerum.com");
+    // $mail->isSMTP();   
+    // $mail->CharSet = "UTF-8";
+    // $mail->SMTPAuth   = true;
+    // $mail->SMTPDebug = 2;
+    // $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    // Настройки вашей почты
-    $mail->Host       = 'mail.univerum.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'mailer@univerum.com'; // Логин на почте
-    $mail->Password   = 'Tc#x^n}3Kjgh'; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('mail@univerum.com', 'mailer@univerum.com'); // Адрес самой почты и имя отправителя
+    // // Настройки вашей почты
+    // $mail->Host       = 'mail.univerum.com'; // SMTP сервера вашей почты
+    // $mail->Username   = 'mailer@univerum.com'; // Логин на почте
+    // $mail->Password   = 'Tc#x^n}3Kjgh'; // Пароль на почте
+    // $mail->SMTPSecure = 'ssl';
+    // $mail->Port       = 465;
+    // $mail->setFrom('mail@univerum.com', 'mailer@univerum.com'); // Адрес самой почты и имя отправителя
 
-    // Получатель письма
-    $mail->addAddress('mail@univerum.com');
+    // // Получатель письма
+    // $mail->addAddress('mail@univerum.com');
 
     
     // // Настройки вашей почты

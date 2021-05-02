@@ -554,7 +554,7 @@ body {
     @media only screen and (max-width: 750px) {
       .header__menu {
         margin-top: 45px;
-        margin-bottom: 45px; } }
+        margin-bottom: 20px; } }
     @media screen and (max-width: 767px) and (orientation: landscape) {
       .header__menu {
         margin-top: 10px;

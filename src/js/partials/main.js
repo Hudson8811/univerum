@@ -1,4 +1,12 @@
+// function checkSection(section, count){
+//     if($(`.section[data-section-id="${section}"]`).offset().top / 2  <= scroll){
+//         if(!$('body').hasClass(`animate-${count}`)){
+//             $('body').addClass(`animate-${count}`)
+//         }
+//     }
+// }
 function animations(scroll){
+
  
 
     if($('.section[data-section-id="1"]').offset().top < scroll + $('#to-top-btn').position().top){
@@ -74,7 +82,8 @@ function animations(scroll){
     }
 
 
-    
+
+  
    
 }
 const settings = {
@@ -375,6 +384,7 @@ $('#fullpage').fullpage({
     normalScrollElements: '',
     //normalScrollElements: '.contacts',
     autoScrolling: false,
+    scrollingSpeed:1500,
     // keyboardScrolling: true,
     // responsiveWidth: 1260,
     

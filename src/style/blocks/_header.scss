@@ -337,7 +337,7 @@
 
     @include mq('tablet') {
       margin-top: vwm(45);
-      margin-bottom: vwm(45);
+      margin-bottom: vwm(20);
     }
 
     @media screen and(max-width:767px) and (orientation: landscape) {

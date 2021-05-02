@@ -1,9 +1,8 @@
-<?php
+﻿<?php
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
-require_once "/autoload.php";
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
